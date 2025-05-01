@@ -1,1 +1,6 @@
 # Galeria-dos-Pixels
+
+Site interativo sobre a história dos videogames, onde os usuários podem explorar diferentes gerações de consoles, descobrir curiosidades, ver dados como vendas e jogos mais populares, além de interagir comentando e votando em enquetes como “console favorito” ou “gênero preferido”. O site também conta com uma dashboard que mostra estatísticas tanto das pesquisas feitas quanto da participação dos usuários, tudo de forma visual e fácil de entender.
+
+Documentação (atualizada em tempo real):
+https://docs.google.com/document/d/12gaLMbNdfRPh8T-0JyvPBxzvvJdey5lpbHGBwNtvAxI/edit?usp=sharing
