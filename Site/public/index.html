@@ -4,32 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria dos Pixels</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style_index.css">
 </head>
 <body>
     <div class="prologo">
-        <div class="texto">
+        <div class="container fade-in">
             <h1>Galeria dos Pixels</h1>
-            <h3>Musel Virtual do VideoGame</h3>
+            <h3>Museu Virtual do VideoGame</h3>
             <p>Uma experiência virtual sobre a história dos videogames, trazendo também curiosidades interessantes sobre os consoles, os jogos e sua evolução ao longo do tempo.</p>
+            <button onclick="fun_telaLogin()">Entrar no Museu</button>
         </div>
     </div>
 
     <div class="meio">
-        <div class="texto">
-            <div>
-                <h2>História</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde et minima, autem repellendus dicta, odio earum amet voluptate, nisi ratione voluptatibus. Eos ab aperiam inventore explicabo reiciendis modi quis recusandae.</p>
-                <img src="../public/assets/imgs/consoles.webp" alt="Consoles de Video Game">
-            </div>
-
-            <div>
-                <h2>Curiosidades</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde et minima, autem repellendus dicta, odio earum amet voluptate, nisi ratione voluptatibus. Eos ab aperiam inventore explicabo reiciendis modi quis recusandae.</p>
-                <img src="../public/assets/imgs/personagens.webp" alt="Consoles de Video Game">
-            </div>
+        <div class="mario_scroll"></div>
+        <div class="container">
+            <div class="texto">
+                <div class="fade-in">
+                    <h2>História</h2>
+                    <p>Veja a história dos consoles que marcaram época. Descubra suas origens, as inovações tecnológicas e como eles transformaram o mundo dos games. Dos clássicos aos modernos, conheça os marcos que moldaram gerações de jogadores.</p>
+                    <img src="../public/assets/imgs/personagens.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
+                </div>
+                <div class="fade-in">
+                    <img src="../public/assets/imgs/consoles.webp" alt="Consoles de Video Game" class="imagem_acima fade-in">
+                    <h2>Curiosidades</h2>
+                    <p>Descubra fatos surpreendentes sobre os consoles que marcaram sua infância e detalhes curiosos sobre seus jogos favoritos, dos bastidores do desenvolvimento às lendas mais comentadas pelos fãs.</p>
+                </div>
+            </div>   
         </div>
-    </div>
+        
+    </div>   
 
+    <div class="roda_pe">
+        <p>2025 Pedro Claudino Barbosa - Projeto Individual</p>
+    </div>
 </body>
 </html>
+<script>
+    // Fade In dos Textos e Imagens
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    faders.forEach(el => observer.observe(el));
+    
+    function fun_telaLogin(){
+        window.location.href = "login.html"; // ou URL completa: https://exemplo.com
+    };
+    
+</script>

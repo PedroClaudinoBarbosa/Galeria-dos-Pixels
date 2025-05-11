@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Pixelify+Sans:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
+}
+
+/* Prológo */
+.prologo {
+    background-image: url(../assets/imgs/background_inicio.webp);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    display: flex;
+    justify-self: center;
+    background-color: #0095e9;
+    width: 100%;
+    height: 100vh;
+}
+
+.prologo .container h1 {
+    font-size: 60px;
+    color: rgb(255, 210, 75);
+    margin-top: 10%;
+}
+
+.prologo .container h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.prologo .container p {
+    font-size: 32px;
+    max-width: 60%;
+}
+
+button {
+    margin-top: 3%;
+    font-size: 32px;
+    padding: 1%;
+    border: solid 1px white;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.45);
+    transition: 0.3s ease-in-out;
+    font-weight: 900;
+}
+
+button:hover{
+    padding: 1.5%;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+    border: none;
+    background-color: rgb(255, 228, 129);
+}
+
+/* Meio */
+
+.meio {
+    background-image: url(../assets/imgs/background_meio.webp);
+    background-color: #3f2832;
+    background-size: contain;
+    background-position: top;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    position: relative;
+}
+
+.meio::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, #000000 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.meio h2{
+    font-size: 48px;
+    color: rgb(255, 210, 75);
+}
+
+.meio .container p {
+    font-size: 32px;
+}
+
+.meio .container {
+    text-align: justify;
+}
+
+.meio .container img{
+    width: 60%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+.meio .container .imagem_abaixo{
+    margin-top: 5%;
+}
+
+.meio .container .imagem_acima
+{
+    margin-bottom: 5%;
+}
+
+.meio .container .texto {
+    display: flex;
+    margin-left: 20%;
+    width: 100%;
+}
+
+.meio .container .texto p{
+    max-width: 60%;
+}
+
+.meio .container .texto div{
+    width: 50%;
+}
+
+/* Scroll Mario */
+
+.mario_scroll {
+    position: sticky;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18%;
+    height: 10%;
+    background-image: url('../assets/imgs/mario_meio.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Roda Pé */
+
+.roda_pe {
+    background-color: black;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.roda_pe p{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    align-self: center;
+    font-size: 20px;
+}
+
