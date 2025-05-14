@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: "Pixelify Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 /* Prológo*/
@@ -13,11 +14,12 @@
     justify-content: center;
 
     background-image: url(../assets/imgs/background_inicio.webp);
-    background-size: contain;
-    background-position: center;
+
+    background-position: center bottom;
     background-repeat: repeat-x;
     background-color: #0095e9;
-    width: 100%;
+
+    min-height: 100vh;
 }
 
 .prologo .container {
@@ -31,7 +33,7 @@
 
 .prologo .container h1{
     font-size: 3vw;
-    margin-top: 10%;
+    margin-top: 10vh;
     color: rgb(255, 217, 0);
 }
 
@@ -41,40 +43,43 @@
 
 .prologo .container p{
     width: 50vw;
-    margin-top: 5%;
+    margin-top: 5vh;
 
     font-size: 1.7vw;
 }
 
 .prologo button {
     margin-top: 8vh;
+    padding: 1.2vw 2.5vw 1.2vw 2.5vw;
+
     background-color: rgba(41, 49, 140, 0.723);
     border: solid 1px white;
+
     color: rgb(255, 255, 255);
-    padding: 1.2vw 2.5vw 1.2vw 2.5vw;
     font-size: 1.2vw;
-    transition: 0.3s ease-in-out;
     text-transform: uppercase;
     font-weight: 900;
+
+    transition: 0.3s ease-in-out;
 }
 
 .prologo button:hover {
-    background-color: rgba(0, 0, 0, 0.704);
+    background-color: rgba(0, 0, 0, 0.845);
     color: rgb(69, 240, 86);
     border: solid 2px greenyellow;
-    padding: 1.5vw 0.5vw 1.5vw 0.5vw;;
+    padding: 1.5vw 2.5vw 1.5vw 2.5vw;;
     font-size: 1.5vw;
 }
 
 /* Meio */
 
 .meio {    
-    background-image: url(../assets/imgs/background_meio.webp);
-    background-color: #3f2832;
-    background-size: contain;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0)), url(../assets/imgs/background_meio.webp);
     background-position: center;
-    background-repeat: repeat-y;
-    height: 100%;
+    background-repeat: repeat;
+    min-height: 120vh;
+    
+
 }
 
 
@@ -89,18 +94,22 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 .meio .container .secao img{
     width: 30vw;
     height: 35vh;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 50px;
 }
 
 .meio .container .secao .texto h2{
-    color: orange;
+    color: rgb(255, 207, 117);
+    text-align: center;
+    padding-bottom: 2vh;
     font-size: 2vw;
+    padding-top: 2vh;
 }
 
 .meio .container .secao .texto p{
@@ -114,105 +123,35 @@
     flex-direction: column;
     width: 30vw;
 }
-/*
-.meio::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 150px;
-    background: linear-gradient(to top, #000000 0%, transparent 100%);
-    pointer-events: none;
-}
 
-.meio h2{
-    font-size: 48px;
-    color: rgb(255, 210, 75);
-}
+/*<><><><><><><> Footer <><><><><><><>*/
 
-.meio .container p {
-    font-size: 32px;
-}
-
-.meio .container {
-    text-align: justify;
-
+.footer {
     display: flex;
+    justify-content: center;
     align-items: center;
-    
+
+    min-height: 10vh;
+    background-color: black;
+
+    color: white;
 }
 
-.meio .container img{
-    width: 60%;
-    border-radius: 20px;
-    object-fit: contain;
+.footer .container {
+    text-align: center;
+    font-size: 1vw;
 }
 
-.meio .container .imagem_abaixo{
-    margin-top: 5%;
-}
 
-.meio .container .imagem_acima
-{
-    margin-bottom: 5%;
-}
-
-.meio .container .secao {
-    display: flex;
-    width: 100%;
-    padding-left: 20%;
-}
-
-.meio .container .secao p{
-    max-width: 60%;
-}
-
-.meio .container .secao div{
-    width: 50%;
-}
-
-/* Scroll Mario */
-
-/*
 .mario_scroll {
-    position: sticky;
-    top: 70%;
+    position: fixed;
+    top: 65%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 18%;
-    height: 10%;
+    min-width: 5vw;
+    min-height: 8vh;
     background-image: url('../assets/imgs/mario_meio.webp');
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
     z-index: 0;
 }
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Roda Pé */
-/*
-.roda_pe {
-    background-color: black;
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-}
-
-.roda_pe p{
-    background-color: black;
-    color: rgb(255, 255, 255);
-    align-self: center;
-    font-size: 20px;
-}
-

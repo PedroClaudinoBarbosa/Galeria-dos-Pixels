@@ -8,37 +8,57 @@
 </head>
 <body>
     <div class="prologo">
-        <div class="container">
+        <div class="container fade-in">
             <h1>Galeria dos Pixels</h1>
             <h2>Museu Virtual do VideoGame</h2>
             <p>Uma experiência virtual sobre a história dos videogames, trazendo também curiosidades interessantes sobre os consoles, os jogos e sua evolução ao longo do tempo.</p>
             <button onclick="fun_telaLogin()">Entrar no Museu</button>
         </div>
     </div>
-    
+
     <div class="meio">
+        
         <div class="container">
+            <div class="mario_scroll"></div>
             <div class="secao">
                 <div class="texto">
                     <h2>História</h2>
                     <p>Veja a história dos consoles que marcaram época. Descubra suas origens, as inovações tecnológicas e como eles transformaram o mundo dos games. Dos clássicos aos modernos, conheça os marcos que moldaram gerações de jogadores.</p>
                 </div>
                 <img src="../public/assets/imgs/consoles.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
-            </div>
+            </div>   
+
             <div class="secao">
                 <img src="../public/assets/imgs/personagens.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
-
                 <div class="texto">
                     <h2>Curiosidades</h2>
-                    <p>Veja a história dos consoles que marcaram época. Descubra suas origens, as inovações tecnológicas e como eles transformaram o mundo dos games. Dos clássicos aos modernos, conheça os marcos que moldaram gerações de jogadores.</p>
+                    <p>Descubra fatos surpreendentes sobre os consoles que marcaram sua infância e detalhes curiosos sobre seus jogos favoritos, dos bastidores do desenvolvimento às lendas mais comentadas pelos fãs.</p>
                 </div>
-            </div>
+            </div>   
+        
+            <div class="secao">
+                <div class="texto">
+                    <h2>Top Jogos de Cada Geração</h2>
+                    <p>Reviva os maiores clássicos de cada era dos videogames. Dos 8 bits aos consoles atuais, veja quais jogos definiram gerações, conquistaram milhões de fãs e marcaram a história com inovação, diversão e legado.</p>
+                </div>
+                <img src="../public/assets/imgs/jogos_largados.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
+            </div>   
         </div>
-    </div>   
-    <!--
-    <div class="roda_pe">
-        <p>2025 Pedro Claudino Barbosa - Projeto Individual</p>
+    </div>  
+    
+    <div class="footer">
+        <div class="container">
+            <p>Projeto Individual - Pedro Claudino Barbosa</p>
+            <p>São Paulo Tech School - 2025</p>
+        </div>
     </div>
-    -->
 </body>
 </html>
+<script>
+    const mario = document.querySelector('.mario_scroll');
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        mario.style.transform = `translate(-50%, ${scrollY * 0.3}px)`;
+    });
+</script>
