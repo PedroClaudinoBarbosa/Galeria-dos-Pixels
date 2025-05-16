@@ -44,12 +44,12 @@
 .prologo .container p{
     width: 50vw;
     margin-top: 5vh;
+    margin-bottom: 8vh;
 
     font-size: 1.7vw;
 }
 
 .prologo button {
-    margin-top: 8vh;
     padding: 1.2vw 2.5vw 1.2vw 2.5vw;
 
     background-color: rgba(41, 49, 140, 0.723);
@@ -64,11 +64,12 @@
 }
 
 .prologo button:hover {
-    background-color: rgba(0, 0, 0, 0.615);
-    color: rgb(69, 240, 86);
-    border: solid 2px greenyellow;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 1px white;
+    color: rgb(63, 255, 134);
     padding: 1.5vw 2.5vw 1.5vw 2.5vw;;
     font-size: 1.5vw;
+    cursor: pointer;
 }
 
 /* Meio */

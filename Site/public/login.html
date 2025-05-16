@@ -9,7 +9,7 @@
 <body>
     <div class="login">
         <div class="container">
-            <div id="div_login"></div>
+            <div id="div_login" onclick="cadastro"></div>
         </div>
     </div>
 </body>
@@ -22,8 +22,33 @@
         <input type="text" placeholder="Email">
         <p>Senha:</p>
         <input type="text" placeholder="Senha">
-        <p>Não tem uma conta? <span id="clique_aqui">Clique aqui</span> para criar uma.</p>
+        <button>Entrar</button>
+
+        <p>Não tem uma conta? <span id="clique_aqui" onclick="cadastrar()">Clique aqui</span> para criar uma.</p>
     `;
+
+    cadastro = `
+        <h1>Entrar na Galeria</h1>
+        <p>Nome de usuário:</p>
+        <input type="text" placeholder="Nome de usuário">
+        <p>Email:</p>
+        <input type="text" placeholder="Email">
+        <p>Senha:</p>
+        <input type="text" placeholder="Senha">
+        <p>Confirme a senha:</p>
+        <input type="text" placeholder="Confirme a senha">
+        <button>Criar conta</button>
+
+        <p>Já tem uma conta? <span id="clique_aqui" onclick="entrar()">Clique aqui</span> para entrar na galeria.</p>
+    `;
+
+    function cadastrar(){
+        div_login.innerHTML = cadastro;
+    }
+
+    function entrar(){
+        div_login.innerHTML = login;
+    }
 
     div_login.innerHTML = login;
 </script>
