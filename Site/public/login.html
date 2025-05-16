@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria dos Pixels</title>
+    <link rel="stylesheet" href="styles/style_login.css">
+</head>
+<body>
+    <div class="login">
+        <div class="container">
+            <div id="div_login"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    login = `
+        <h1>Entrar na Galeria</h1>
+        <p>Email:</p>
+        <input type="text" placeholder="Email">
+        <p>Senha:</p>
+        <input type="text" placeholder="Senha">
+        <p>Não tem uma conta? <span id="clique_aqui">Clique aqui</span> para criar uma.</p>
+    `;
+
+    div_login.innerHTML = login;
+</script>

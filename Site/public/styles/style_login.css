@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Pixelify+Sans:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+
+.login {
+    display: flex;
+    justify-content: center;
+
+    background-image: url(../assets/imgs/background_login.webp);
+    background-size: contain;
+
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-color: #0095e9;
+
+    min-height: 100vh;
+}
+
+.login .container {
+
+    border: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    color: white;
+    padding: 5vw;
+}
+
+.login .container #div_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#div_login h1{
+    margin-bottom: 10%;
+    font-size: 3vw;
+    color: rgb(255, 217, 0);
+}
+
+#div_login p{
+    margin-bottom: 2%;
+}   
+
+#div_login input {
+    margin-bottom: 3%;
+    background-color: black;
+    color: white;
+    border: solid white 1px;
+    padding: 0.2vw;
+}
+
+#clique_aqui {
+    color: red  ;
+}
+
