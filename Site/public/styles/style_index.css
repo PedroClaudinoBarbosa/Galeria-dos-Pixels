@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Pixelify+Sans:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url(../assets/fonts/PixelifySans.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
 * {
     padding: 0;
     margin: 0;
@@ -13,7 +17,7 @@
     display: flex;
     justify-content: center;
 
-    background-image: url(../assets/imgs/background_inicio.webp);
+    background-image: linear-gradient(to bottom, rgb(31, 10, 121), 10%, rgba(0, 0, 0, 0)),url(../assets/imgs/background_inicio.webp);
 
     background-position: center bottom;
     background-repeat: repeat-x;

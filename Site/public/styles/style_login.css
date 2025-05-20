@@ -11,20 +11,33 @@
     display: flex;
     justify-content: center;
 
-    background-image: url(../assets/imgs/background_login.webp);
-    background-size: contain;
+    background-image:
+        url(../assets/imgs/sonic_run.gif),
+        linear-gradient(to bottom, rgb(31, 10, 121), 10%, rgba(0, 0, 0, 0)),
+        url(../assets/imgs/background_login.webp);
 
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    background-color: #000000;
+    background-color: #0095e9;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: center bottom, center bottom, 0 100%;
+
+    animation: moverFundo 10s linear infinite;
 
     min-height: 100vh;
 }
 
+@keyframes moverFundo {
+    from {
+        background-position: center bottom, center bottom, 0% 100%;
+    }
+    to {
+        background-position: center bottom, center bottom, -10000px 100%;
+    }
+}
+
+
 .login .container {
 
     border: none;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     color: white;
     padding: 5vw;
 }
@@ -39,27 +52,29 @@
 
 #div_login h1{
     margin-bottom: 3vh;
-    font-size: 32px;
+    font-size: 52px;
     color: #EBD002;
 }
 
 #div_login p{
     margin-bottom: 2%;
+    font-size: 25px;
 }   
 
 #div_login input {
     margin-bottom: 3%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.39);
     color: white;
     border: solid white 1px;
-    padding: 0.2vw;
+    padding: 10px;
 }
 
 #div_login button {
-    background-color: rgba(0, 0, 0, 0.615);
+    background-color: rgba(0, 0, 0, 0.39);
     border: solid white 1px;
     padding: 10px 30px;
     margin: 20px;
+    font-size: 20px;
     color: white;
     transition: 0.3s ease-in-out;
 
@@ -85,4 +100,5 @@
     color: rgb(0, 255, 153);
     cursor: pointer;
 }
+
 
