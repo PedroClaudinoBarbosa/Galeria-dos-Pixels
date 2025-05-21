@@ -16,41 +16,38 @@
 .prologo {
     display: flex;
     justify-content: center;
-
     background-image: linear-gradient(to bottom, rgb(31, 10, 121), 10%, rgba(0, 0, 0, 0)),url(../assets/imgs/background_inicio.webp);
-
     background-position: center bottom;
     background-repeat: repeat-x;
     background-color: #0095e9;
-
     min-height: 100vh;
 }
 
-.prologo .container {
+.prologo .container .inicio{
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     color: rgb(255, 255, 255);
 }
 
-.prologo .container h1{
-    font-size: 3vw;
+.prologo .container .inicio h1{
+    font-size: 55px;
     margin-top: 10vh;
     color: rgb(255, 217, 0);
 }
 
-.prologo .container h2{
-    font-size: 2vw;
+.prologo .container .inicio h2{
+    font-size: 30px;
 }
 
-.prologo .container p{
-    width: 50vw;
+.prologo .container .inicio p{
+    max-width: 70%;
+    width: 100vw;
     margin-top: 5vh;
     margin-bottom: 8vh;
-
-    font-size: 1.7vw;
+    font-size: 28px;
 }
 
 .prologo button {
@@ -68,11 +65,12 @@
 }
 
 .prologo button:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: solid 1px white;
-    color: rgb(63, 255, 134);
-    padding: 1.5vw 2.5vw 1.5vw 2.5vw;;
-    font-size: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.615);
+    border: solid white 1px;
+    padding: 15px 40px;
+    margin: 20px;
+    font-size: 18px;
+    color: rgb(87, 254, 140);
     cursor: pointer;
 }
 
@@ -83,10 +81,7 @@
     background-position: center;
     background-repeat: repeat;
     min-height: 120vh;
-    
-
 }
-
 
 .meio .container {
     display: flex;
@@ -150,13 +145,79 @@
 
 .mario_scroll {
     position: fixed;
-    top: 65%;
+    top: 70%;
     left: 50%;
-    min-width: 5vw;
-    min-height: 8vh;
+    min-width: 64px;
+    min-height: 64px;
     background-image: url('../assets/imgs/mario_meio.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     z-index: 0;
+}
+
+/*<><><><><><><> Login <><><><><><><>*/
+
+.prologo .container .login{
+    background-color: #009fe96e;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    margin-top: 10vh;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.login h1{
+    margin-bottom: 1vh;
+    font-size: 32px;
+    color: #EBD002;
+}
+
+.login p{
+    margin-bottom: 2%;
+    font-size: 20px;
+}   
+
+.login input {
+    margin-bottom: 3%;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+    border: solid white 1px;
+    padding: 10px;
+}
+
+.login button {
+    background-color: rgba(0, 0, 0, 0.39);
+    border: solid white 1px;
+    padding: 10px 30px;
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s ease-in-out;
+
+}
+
+.login button:hover {
+    background-color: rgba(0, 0, 0, 0.615);
+    border: solid white 1px;
+    padding: 15px 40px;
+    margin: 20px;
+    font-size: 18px;
+    color: rgb(87, 254, 140);
+    cursor: pointer;
+
+}
+
+#clique_aqui {
+    color: #EBD002;
+    transition: 0.3s ease-in-out;
+}
+
+#clique_aqui:hover{
+    color: rgb(0, 255, 153);
+    cursor: pointer;
 }

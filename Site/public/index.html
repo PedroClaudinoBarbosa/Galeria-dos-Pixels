@@ -8,13 +8,13 @@
 </head>
 <body>
     <div class="prologo">
-        <div class="container fade-in">
-            <h1>Galeria dos Pixels</h1>
-            <h2>Museu Virtual do VideoGame</h2>
-            <p>Uma experiência virtual sobre a história dos videogames, trazendo também curiosidades interessantes sobre os consoles, os jogos e sua evolução ao longo do tempo.</p>
-             <a href="login.html">
-                <button>Entrar na Galeria</button>
-             </a>   
+        <div class="container" id="div_prologo">
+            <div class="inicio">
+                <h1>Galeria dos Pixels</h1>
+                <h2>Museu Virtual do VideoGame</h2>
+                <p>Uma experiência virtual sobre a história dos videogames, trazendo também curiosidades interessantes sobre os consoles, os jogos e sua evolução ao longo do tempo.</p>
+                <button onclick="login()">Entrar na Galeria</button>
+            </div>
         </div>
     </div>
 
@@ -72,4 +72,39 @@
         const scrollY = window.scrollY;
         mario.style.transform = `translate(-50%, ${scrollY * 0.3}px)`;
     });
+
+
+
+    function login(){
+        div_prologo.innerHTML = `
+            <div class="login">
+                <h1>Entrar na Galeria</h1>
+                <p>Email:</p>
+                <input type="text" placeholder="Email">
+                <p>Senha:</p>
+                <input type="text" placeholder="Senha">
+                <button>Entrar</button>
+                <p>Não tem uma conta? <span id="clique_aqui" onclick="cadastrar()">Clique aqui</span> para criar uma.</p>
+            </div>     
+        `;
+    }
+    
+    function cadastrar(){
+        div_prologo.innerHTML = `
+            <div class="login">
+                <h1>Entrar na Galeria</h1>
+                <p>Nome de usuário:</p>
+                <input type="text" placeholder="Nome de usuário">
+                <p>Email:</p>
+                <input type="text" placeholder="Email">
+                <p>Senha:</p>
+                <input type="text" placeholder="Senha">
+                <p>Confirme a senha:</p>
+                <input type="text" placeholder="Confirme a senha">
+                <button>Criar conta</button>
+
+                <p>Já tem uma conta? <span id="clique_aqui" onclick="login()">Clique aqui</span> para entrar na galeria.</p>
+            </div> 
+        `;
+    }
 </script>
