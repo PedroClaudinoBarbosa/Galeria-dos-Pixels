@@ -4,6 +4,18 @@
   font-weight: 100;
   font-style: normal;
 }
+
+.vermelho {
+    color: rgb(252, 138, 138);
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.verde {
+    color: rgb(153, 245, 125);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -12,15 +24,32 @@
 }
 
 /* Prológo*/
+@keyframes moverNuvens {
+  0% {
+    background-position: 0 bottom, center bottom, center bottom;
+  }
+  100% {
+    background-position: -200000px bottom, center bottom, center bottom;
+  }
+}
 
 .prologo {
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(to bottom, rgb(31, 10, 121), 10%, rgba(0, 0, 0, 0)),url(../assets/imgs/background_inicio.webp);
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    background-color: #0095e9;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  background-image: 
+    url(../assets/imgs/nuvem.webp),
+    linear-gradient(to bottom, rgb(31, 10, 121) 10%, rgba(0, 0, 0, 0)),
+    url(../assets/imgs/background_inicio.webp);
+
+  background-position: 0 bottom, center bottom, center bottom;
+  background-repeat: repeat-x, no-repeat, repeat-x;
+  background-size: auto, none, none;
+  background-color: #0095e9;
+
+  min-height: 100vh;
+
+  animation: moverNuvens 6000s linear infinite;
 }
 
 .prologo .container .inicio{
@@ -149,7 +178,7 @@
     left: 50%;
     min-width: 64px;
     min-height: 64px;
-    background-image: url('../assets/imgs/mario_meio.webp');
+    background-image: url(../assets/imgs/mario_meio.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -163,12 +192,14 @@
     border-radius: 20px;
     padding: 20px;
     display: flex;
-    margin-top: 10vh;
+    margin-top: 5vh;
     color: white;
     flex-direction: column;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .login h1{

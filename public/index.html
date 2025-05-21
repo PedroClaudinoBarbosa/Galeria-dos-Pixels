@@ -13,7 +13,7 @@
                 <h1>Galeria dos Pixels</h1>
                 <h2>Museu Virtual do VideoGame</h2>
                 <p>Uma experiência virtual sobre a história dos videogames, trazendo também curiosidades interessantes sobre os consoles, os jogos e sua evolução ao longo do tempo.</p>
-                <button onclick="login()">Entrar na Galeria</button>
+                <button onclick="telaLogin()">Entrar na Galeria</button>
             </div>
         </div>
     </div>
@@ -27,11 +27,11 @@
                     <h2>História</h2>
                     <p>Veja a história dos consoles que marcaram época. Descubra suas origens, as inovações tecnológicas e como eles transformaram o mundo dos games. Dos clássicos aos modernos, conheça os marcos que moldaram gerações de jogadores.</p>
                 </div>
-                <img src="../public/assets/imgs/consoles.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
+                <img src="../assets/imgs/consoles.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
             </div>   
 
             <div class="secao">
-                <img src="../public/assets/imgs/personagens.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
+                <img src="../assets/imgs/personagens.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
                 <div class="texto">
                     <h2>Curiosidades</h2>
                     <p>Descubra fatos surpreendentes sobre os consoles que marcaram sua infância e detalhes curiosos sobre seus jogos favoritos, dos bastidores do desenvolvimento às lendas mais comentadas pelos fãs.</p>
@@ -43,11 +43,11 @@
                     <h2>Top Jogos de Cada Geração</h2>
                     <p>Reviva os maiores clássicos de cada era dos videogames. Dos 8 bits aos consoles atuais, veja quais jogos definiram gerações, conquistaram milhões de fãs e marcaram a história com inovação, diversão e legado.</p>
                 </div>
-                <img src="../public/assets/imgs/jogos_largados.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
+                <img src="../assets/imgs/jogos_largados.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
             </div>   
       
             <div class="secao">
-                <img src="../public/assets/imgs/cartucho_inteiro.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
+                <img src="../assets/imgs/cartucho_inteiro.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
                 <div class="texto">
                     <h2>Tecnologia</h2>
                     <p>Veja como funcionavam os videogames por trás dos panos: desde os chips e cartuchos até os gráficos em 3D e inteligência artificial. Entenda as inovações que tornaram cada geração mais poderosa e imersiva.</p>
@@ -64,47 +64,4 @@
     </div>
 </body>
 </html>
-<script>
-    const mario = document.querySelector('.mario_scroll');
-    mario.style.transform = `translate(-50%, ${scrollY * 0.3}px)`;
-
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        mario.style.transform = `translate(-50%, ${scrollY * 0.3}px)`;
-    });
-
-
-
-    function login(){
-        div_prologo.innerHTML = `
-            <div class="login">
-                <h1>Entrar na Galeria</h1>
-                <p>Email:</p>
-                <input type="text" placeholder="Email">
-                <p>Senha:</p>
-                <input type="text" placeholder="Senha">
-                <button>Entrar</button>
-                <p>Não tem uma conta? <span id="clique_aqui" onclick="cadastrar()">Clique aqui</span> para criar uma.</p>
-            </div>     
-        `;
-    }
-    
-    function cadastrar(){
-        div_prologo.innerHTML = `
-            <div class="login">
-                <h1>Entrar na Galeria</h1>
-                <p>Nome de usuário:</p>
-                <input type="text" placeholder="Nome de usuário">
-                <p>Email:</p>
-                <input type="text" placeholder="Email">
-                <p>Senha:</p>
-                <input type="text" placeholder="Senha">
-                <p>Confirme a senha:</p>
-                <input type="text" placeholder="Confirme a senha">
-                <button>Criar conta</button>
-
-                <p>Já tem uma conta? <span id="clique_aqui" onclick="login()">Clique aqui</span> para entrar na galeria.</p>
-            </div> 
-        `;
-    }
-</script>
+<script src="scripts/index.js"></script>
