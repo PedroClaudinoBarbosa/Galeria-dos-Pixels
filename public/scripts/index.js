@@ -13,7 +13,7 @@ function telaLogin() {
                 <p>Email:</p>
                 <input type="text" placeholder="Email" id="ipt_email">
                 <p>Senha:</p>
-                <input type="text" placeholder="Senha" id="ipt_senha">
+                <input type="password" placeholder="Senha" id="ipt_senha">
                 <div id="div_alerta"></div>
                 <button onclick="entrar()">Entrar</button>
                 <p>Não tem uma conta? <span id="clique_aqui" onclick="telaCadastrar()">Clique aqui</span> para criar uma.</p>

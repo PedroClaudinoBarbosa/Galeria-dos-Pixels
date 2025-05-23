@@ -83,9 +83,9 @@
     padding: 1.2vw 2.5vw 1.2vw 2.5vw;
 
     background-color: rgba(41, 49, 140, 0.723);
-    border: solid 1px white;
+    border: solid 1px rgb(255, 212, 39);
 
-    color: rgb(255, 255, 255);
+    color: rgb(246, 157, 63);
     font-size: 1.2vw;
     text-transform: uppercase;
     font-weight: 900;
@@ -174,7 +174,7 @@
 
 .mario_scroll {
     position: fixed;
-    top: 70%;
+    top: 60%;
     left: 50%;
     min-width: 64px;
     min-height: 64px;

@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria dos Pixels</title>
+    <link rel="stylesheet" href="styles/style_galeria.css">
 </head>
 <body>
-    <div class="hello">
-        <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+    <div class="galeria">
+        <div class="container">
+            <div class="usuario">
+                <h3 id="b_usuario"></h3>
+                <img src="../assets/imgs/kratos.webp" alt="">
+            </div>
+            <button onclick="sair()">❌ Sair</button>
+        </div>
+        <button onclick="linhaTempo()">Linha do Tempo</button>
     </div>
 </body>
 </html>
 <script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = `Olá <span class="amarelo">${sessionStorage.NOME_USUARIO}</span>! Boas vindas à galeria dos pixels.`;
+
+    function sair(){
+        window.location = "index.html";
+    }
+
+    function linhaTempo(){
+        window.location = "linha_do_tempo.html";
+    }
 </script>

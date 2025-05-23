@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url(../assets/fonts/PixelifySans.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+.vermelho {
+    color: rgb(252, 138, 138);
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.verde {
+    color: rgb(153, 245, 125);
+}
+
+.amarelo{
+    color: #fee761;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+body {  
+    background-color: #181425;
+}
+ 
+.galeria{
+    background-image: 
+    linear-gradient(to bottom, #2a2c2d 0.5%, rgba(0, 0, 0, 0)),
+    url(../assets/imgs/background_galeria.webp);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.galeria .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.galeria .container .usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria .container h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.galeria .container .usuario img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50px;
+    border: solid 2px white;
+    object-fit: cover;
+    margin: 10px;
+    border-style: dashed;
+}
+
+.galeria .container {
+    padding: 22px 0px 22px 0px;
+    display: flex;
+}
+
+.galeria .container button {
+    padding: 5px;
+    margin-left: 2%;
+    padding-right: 15px;
+    font-size: 15px;
+    justify-self: flex-start;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: solid 1px white;
+    transition: 0.3s ease-in-out;
+    position: absolute; 
+    z-index: 1;
+    border-radius: 30px;
+}
+
+.galeria .container button:hover {
+    padding-right: 30px;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: solid 1px rgb(255, 31, 31);
+    cursor: pointer;
+}

@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url(../assets/fonts/PixelifySans.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@keyframes moverFundo {
+  0% {
+    background-position: 0 bottom, center bottom, center bottom;
+  }
+  100% {
+    background-position: -1000px bottom, center bottom, center bottom;
+  }
+}
+
+.vermelho {
+    color: rgb(252, 138, 138);
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.verde {
+    color: rgb(153, 245, 125);
+}
+
+.amarelo{
+    color: #fee761;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+body {  
+    background-color: #181425;
+}
+ 
+.galeria{
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.625) 100%),
+    url(../assets/imgs/textura_tetris.webp);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.galeria .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: linear-gradient(to bottom, #000000a5 100%),url(../assets/imgs/textura_tetris.webp);
+    background-size: 100px;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    border-bottom: solid 1px white;
+    border-style: dashed;
+}
+
+.galeria .container .nav_bar {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.galeria .container h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.galeria .container img {
+    width: 52px;
+    height: 52px;
+    border: solid 2px white;
+    object-fit: cover;
+    margin: 0px 10px 10px 0px;
+    border-style: dashed;
+}
+
+.galeria .container {
+    padding: 22px 0px 22px 0px;
+    display: flex;
+}
+
+.galeria .container button {
+    margin-left: 5%;
+    padding: 5px 15px 5px 15px;
+    font-size: 15px;
+    justify-self: flex-start;
+    background-color: rgba(0, 0, 0, 0.704);
+    color: white;
+    border: solid 1px white;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.galeria .container button:hover {
+    font-size: 18px;
+    color: #feae34;
+    border: solid 2px #f77622;
+    cursor: pointer;
+    border-style: dashed;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+.card .card_container{
+    background-image: linear-gradient(to bottom, #262b44 50%, rgb(0, 0, 0));
+    color: white;
+    max-width: 400px;
+    padding: 0;
+    border-radius: 20px;
+}
+
+.card .texto {
+    padding: 20px;
+}
+
+.card .texto p{
+    text-align: justify;
+    
+}
+
+.card .texto h2{
+    margin-bottom: 20px;
+    font-size: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px dotted orange;
+    color: #feae34;
+    text-align: center;
+    
+}
+

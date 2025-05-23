@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria dos Pixels</title>
+    <link rel="stylesheet" href="styles/style_linha_do_tempo.css">
+</head>
+<body>
+    <div class="galeria">
+        <div class="container">
+            <div class="nav_bar">
+
+                    <img src="../assets/imgs/kratos.webp" alt="">
+                    <h3 id="b_usuario"></h3>
+                
+                    <button onclick="salao()">Salão Principal</button>
+                    <button onclick="salao()">Linha do Tempo</button>
+                    <button onclick="salao()">Tecnoteca</button>                            
+                    <button onclick="salao()">Salão das Opiniões</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>1958</h3>
+                <div class="card_container">
+                    <img src="../assets/imgs/tennis_for_two.webp" alt="">
+                    <div class="texto">
+                        <h2>Tennis for Two</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque similique sit, aut vitae optio consequatur aspernatur commodi necessitatibus dolorum, eius atque nemo ducimus ratione assumenda ea eaque soluta corrupti voluptates?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>1961</h3>
+                <div class="card_container">
+                    <img src="../assets/imgs/spacewar.webp" alt="">
+                    <div class="texto">
+                        <h2>Spacewar!</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque similique sit, aut vitae optio consequatur aspernatur commodi necessitatibus dolorum, eius atque nemo ducimus ratione assumenda ea eaque soluta corrupti voluptates?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>1971</h3>
+                <div class="card_container">
+                    <img src="../assets/imgs/computer_space.webp" alt="">
+                    <div class="texto">
+                        <h2>Computer Space</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque similique sit, aut vitae optio consequatur aspernatur commodi necessitatibus dolorum, eius atque nemo ducimus ratione assumenda ea eaque soluta corrupti voluptates?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>1971</h3>
+                <div class="card_container">
+                    <img src="../assets/imgs/galaxy_game.webp" alt="">
+                    <div class="texto">
+                        <h2>Galaxy Game</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque similique sit, aut vitae optio consequatur aspernatur commodi necessitatibus dolorum, eius atque nemo ducimus ratione assumenda ea eaque soluta corrupti voluptates?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>1972</h3>
+                <div class="card_container">
+                    <img src="../assets/imgs/pong.webp" alt="">
+                    <div class="texto">
+                        <h2>Pong</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque similique sit, aut vitae optio consequatur aspernatur commodi necessitatibus dolorum, eius atque nemo ducimus ratione assumenda ea eaque soluta corrupti voluptates?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    b_usuario.innerHTML = `<span class="amarelo">${sessionStorage.NOME_USUARIO}</span>`;
+
+    function sair(){
+        window.location = "index.html";
+    }
+
+    function salao(){
+        window.location = "galeria.html";
+    }
+</script>
