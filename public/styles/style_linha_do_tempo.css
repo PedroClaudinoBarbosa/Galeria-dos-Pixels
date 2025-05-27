@@ -124,7 +124,7 @@ body {
     gap: 20px;
     padding: 20px;
     height: auto;
-    padding-top: 1.2%;
+    padding-top: 1%;
     gap: 50px;
 }
 
@@ -135,7 +135,7 @@ body {
 
 .card img{
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -152,7 +152,7 @@ body {
     background-image: linear-gradient(to bottom, #352a9b 50%, rgb(34, 94, 64));
     color: white;
     max-width: 400px;
-    min-height: 580px;
+    min-height: 530px;
     padding: 0;
     border-radius: 20px;
 }
