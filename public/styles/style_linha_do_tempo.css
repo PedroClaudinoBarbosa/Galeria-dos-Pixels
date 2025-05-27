@@ -33,40 +33,46 @@
     padding: 0;
     margin: 0;
     font-family: "Pixelify Sans", sans-serif;
-    overflow-x: hidden;
 }
 
-body {  
-    background-color: #181425;
+body {
+    background-color: #0204b6;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: max-content; /* Importante: permite expandir horizontalmente conforme o conteúdo */
 }
  
 .galeria{
     background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.625) 100%),
-    url(../assets/imgs/textura_tetris.webp);
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.226) 100%),
+    url(../assets/imgs/sonicbackgroud.gif);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: bottom;
     min-height: 100vh;
 }
 
 .galeria .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-image: linear-gradient(to bottom, #000000a5 100%),url(../assets/imgs/textura_tetris.webp);
+    background-image: linear-gradient(to bottom, #251869 20%, rgba(34, 87, 94, 0));
     background-size: 100px;
     width: 100vw;
     position: fixed;
     z-index: 1000;
-    border-bottom: solid 1px white;
-    border-style: dashed;
 }
 
 .galeria .container .nav_bar {
     display: flex;
     width: 100%;
-    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.galeria .container .nav_bar .usuario{
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -83,6 +89,7 @@ body {
     object-fit: cover;
     margin: 0px 10px 10px 0px;
     border-style: dashed;
+    border-radius: 40px;
 }
 
 .galeria .container {
@@ -93,9 +100,10 @@ body {
 .galeria .container button {
     margin-left: 5%;
     padding: 5px 15px 5px 15px;
+    border-radius: 40px;
     font-size: 15px;
     justify-self: flex-start;
-    background-color: rgba(0, 0, 0, 0.704);
+    background-color: rgba(11, 33, 61, 0.185);
     color: white;
     border: solid 1px white;
     transition: 0.3s ease-in-out;
@@ -112,28 +120,39 @@ body {
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 10%;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+    padding-top: 1.2%;
+    gap: 50px;
+}
+
+.card {
+    flex: 0 0 auto; /* Impede que as cards se redimensionem e garante largura fixa */
+    width: 400px;
 }
 
 .card img{
     width: 100%;
     height: 300px;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .card h3 {
-    color: white;
+    color: rgb(255, 212, 39);
     font-size: 30px;
     font-style: italic;
     text-align: center;
 }
 
 .card .card_container{
-    background-image: linear-gradient(to bottom, #262b44 50%, rgb(0, 0, 0));
+    background-image: linear-gradient(to bottom, #352a9b 50%, rgb(34, 94, 64));
     color: white;
     max-width: 400px;
+    min-height: 580px;
     padding: 0;
     border-radius: 20px;
 }
