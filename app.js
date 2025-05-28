@@ -17,6 +17,8 @@ var app = express();
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
+var opinioesRouter = require("./src/routes/opinioes");
+var dashboadRouter = require("./src/routes/dashboard");
 
 
 app.use(express.json());
@@ -27,7 +29,8 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
-
+app.use("/opinioes", opinioesRouter);
+app.use("/dashboard", dashboadRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`

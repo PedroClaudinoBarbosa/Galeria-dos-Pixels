@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria dos Pixels</title>
+    <link rel="stylesheet" href="styles/style_salao_das_opinioes.css">
+</head>
+<body>
+    <div class="galeria">
+        <div class="container">
+            <div class="nav_bar">
+                    <div class="usuario">
+                    <img src="../assets/imgs/kratos.webp" alt="">
+                    <h3 id="b_usuario"></h3>
+                    </div>
+                
+                    <button onclick="salao()">Salão Principal</button>
+                    <button onclick="opinioes()">Linha do Tempo</button>
+                    <button onclick="salao()">Biblioteca do Hardware & Software</button>                            
+            </div>
+        </div>
+        <div class="perguntas">
+            <img src="../assets/imgs/ace.webp" alt="Consoles de Video Game" class="imagem_abaixo fade-in">
+            <h1>Tribunal das Opiniões</h1>
+            <div class="card">
+            <p>Genêro de Videogame favorito:</p>
+            <select id="generoFavorito" name="genero" required onchange="generoSelecionado(this)">
+            <option value="0" selected>Nenhum</option>
+
+            <optgroup label="Ação">
+                <option value=1>Plataforma</option>
+                <option value=2>Hack and Slash</option>
+                <option value=3>Beat 'em up</option>
+                <option value=4>Run and Gun</option>
+            </optgroup>
+
+            <optgroup label="Aventura">
+                <option value=5>Aventura de Ação</option>
+                <option value=6>Point and Click</option>
+                <option value=7>Metroidvania</option>
+                <option value=8>Survival</option>
+            </optgroup>
+
+            <optgroup label="RPG (Role-Playing Game)">
+                <option value=9>RPG de Turno</option>
+                <option value=10>RPG de Ação</option>
+                <option value=11>JRPG</option>
+                <option value=12>Roguelike / Roguelite</option>
+                <option value=13>MMORPG</option>
+            </optgroup>
+
+            <optgroup label="Estratégia">
+                <option value=14>RTS (Tempo Real)</option>
+                <option value=15>Tático por Turno</option>
+                <option value=16>Defesa de Torre</option>
+                <option value=17>4X</option>
+            </optgroup>
+
+            <optgroup label="Simulação">
+                <option value=18>Simulação de Vida</option>
+                <option value=19>Construção e Gestão</option>
+                <option value=20>Simulação de Voo</option>
+                <option value=21>Simulador Realista</option>
+            </optgroup>
+
+            <optgroup label="Esporte e Corrida">
+                <option value=22>Futebol</option>
+                <option value=23>Basquete</option>
+                <option value=24>Corrida Arcade</option>
+                <option value=25>Simulação de Corrida</option>
+            </optgroup>
+
+            <optgroup label="Tiro (Shooter)">
+                <option value=26>FPS</option>
+                <option value=27>TPS</option>
+                <option value=28>Shoot 'em up</option>
+                <option value=29>Battle Royale</option>
+            </optgroup>
+
+            <optgroup label="Puzzle e Party Game">
+                <option value=30>Puzzle</option>
+                <option value=31>Party Game</option>
+                <option value=32>Match-3</option>
+                <option value=33>Quebra-cabeça Lógico</option>
+            </optgroup>
+
+            <optgroup label="Música e Ritmo">
+                <option value=34>Ritmo</option>
+                <option value=35>Karaokê</option>
+                <option value=36>Dança</option>
+            </optgroup>
+
+            <optgroup label="Outros">
+                <option value=37>Visual Novel</option>
+                <option value=38>Sandbox</option>
+                <option value=39>Educacional</option>
+                <option value=40>Idle / Incremental</option>
+            </optgroup>
+            </select>
+            </div>
+            <div class="card">
+                <p>Console favorito:</p>
+                <select id="consoleFavorito" name="console" required onchange="consoleSelecionado(this)">
+                <option value="0" selected>Nenhum</option>
+
+                <optgroup label="1ª Geração (década de 1970)">
+                    <option value=1>Magnavox Odyssey</option>
+                </optgroup>
+
+                <optgroup label="2ª Geração">
+                    <option value=2>Atari 2600</option>
+                    <option value=3>Intellivision</option>
+                    <option value=4>ColecoVision</option>
+                </optgroup>
+
+                <optgroup label="3ª Geração">
+                    <option value=5>Nintendo Entertainment System (NES)</option>
+                    <option value=6>Sega Master System</option>
+                </optgroup>
+
+                <optgroup label="4ª Geração">
+                    <option value=7>Super Nintendo Entertainment System (SNES)</option>
+                    <option value=8>Sega Genesis (Mega Drive)</option>
+                    <option value=9>Neo Geo</option>
+                </optgroup>
+
+                <optgroup label="5ª Geração">
+                    <option value=10>Sony PlayStation</option>
+                    <option value=11>Nintendo 64</option>
+                    <option value=12>Sega Saturn</option>
+                </optgroup>
+
+                <optgroup label="6ª Geração">
+                    <option value=13>Sony PlayStation 2</option>
+                    <option value=14>Microsoft Xbox</option>
+                    <option value=15>Nintendo GameCube</option>
+                    <option value=16>Sega Dreamcast</option>
+                </optgroup>
+
+                <optgroup label="7ª Geração">
+                    <option value=17>Sony PlayStation 3</option>
+                    <option value=18>Microsoft Xbox 360</option>
+                    <option value=19>Nintendo Wii</option>
+                </optgroup>
+
+                <optgroup label="8ª Geração">
+                    <option value=20>Sony PlayStation 4</option>
+                    <option value=21>Microsoft Xbox One</option>
+                    <option value=22>Nintendo Switch</option>
+                </optgroup>
+
+                <optgroup label="9ª Geração (atual)">
+                    <option value=23>Sony PlayStation 5</option>
+                    <option value=24>Microsoft Xbox Series X/S</option>
+                </optgroup>
+                </select>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="graficosConsoles">
+                <div id="consoles_pizza">
+                    <canvas id="graficoPizza" width="400" height="400"></canvas>
+                </div>
+                <div>
+                    <canvas id="graficoConsoles" width="400" height="400"></canvas>
+                </div>
+            <div class="graficosGeneros">
+                <canvas id="graficoGeneros" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="scripts/navbar.js"></script>
+<script>
+    window.onload = function () {
+        const consoleSalvo = sessionStorage.CONSOLE_USUARIO;
+        const generoSalvo = sessionStorage.GENERO_USUARIO;
+
+        if (consoleSalvo) {
+            const selectConsole = document.getElementById("consoleFavorito");
+            selectConsole.value = consoleSalvo;
+        }
+        if (generoSalvo) {
+            const selectGenero = document.getElementById("generoFavorito");
+            selectGenero.value = generoSalvo;
+        }
+
+        // Exibe o nome do usuário
+        b_usuario.innerHTML = `<span class="amarelo">${sessionStorage.NOME_USUARIO}</span>`;
+
+        obterDadosConsolesGeracao();
+        obterDadosTopConsoles();
+        obterDadosGenerosPopulares();
+    };
+
+    function consoleSelecionado() {
+        const opcaoSelecionada = consoleFavorito.value;
+        console.log("Console selecionado:", opcaoSelecionada);
+        console.log(sessionStorage.EMAIL_USUARIO);
+
+        fetch("/opinioes/cadastrarConsole", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                console_idServer: opcaoSelecionada,
+                console_emailServer: sessionStorage.EMAIL_USUARIO
+            }),
+        })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                console.log(`<p class="verde">👍 Console Enviado com Sucesso!</p>`);
+                sessionStorage.CONSOLE_USUARIO = opcaoSelecionada;
+                console.log("Console:" + sessionStorage.CONSOLE_USUARIO);
+            } else {
+                throw "Houve um erro ao tentar realizar o cadastro do console!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+    function generoSelecionado() {
+        const opcaoSelecionada = generoFavorito.value;
+        console.log("Genero selecionado:", opcaoSelecionada);
+        console.log(sessionStorage.EMAIL_USUARIO);
+
+        fetch("/opinioes/cadastrarGenero", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                genero_idServer: opcaoSelecionada,
+                console_emailServer: sessionStorage.EMAIL_USUARIO
+            }),
+        })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                console.log(`<p class="verde">👍 Console Enviado com Sucesso!</p>`);
+                sessionStorage.GENERO_USUARIO = opcaoSelecionada;
+                console.log("Console:" + sessionStorage.GENERO_USUARIO);
+            } else {
+                throw "Houve um erro ao tentar realizar o cadastro do console!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function obterDadosConsolesGeracao() {
+        fetch(`/dashboard/geracao`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+                    graficoGeracao();
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+    }
+
+    function graficoGeracao(){
+    fetch('/dashboard/geracao')
+        .then(res => res.json())
+        .then(dados => {
+            const labels = dados.map(item => item.geracao_console);
+            const valores = dados.map(item => item.quantidade_usuarios);
+
+            const ctx = document.getElementById('graficoPizza').getContext('2d');
+            const graficoPizza = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Consoles Favoritos dos Usuários por Geração',
+                        data: valores,
+                        backgroundColor: [
+                            '#5a6988',
+                            '#66E5ED', 
+                            '#1E49A3', 
+                            '#43F048', 
+                            '#F9C38A', 
+                            '#7E150A',
+                            '#F8B509', 
+                            '#F2305E', 
+                            '#7D1B7E',
+                            '#181425' 
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        title: {
+                            display: true,
+                            color: 'white',
+                            text: 'Consoles Favoritos dos Usuários por Geração',
+     
+                        }
+                    }
+                }
+            });
+        })
+        .catch(erro => {
+            console.error("Erro ao carregar dados do gráfico:", erro);
+        });
+    }
+
+    function generoSelecionado() {
+        const opcaoSelecionada = generoFavorito.value;
+        console.log("Genero selecionado:", opcaoSelecionada);
+        console.log(sessionStorage.EMAIL_USUARIO);
+
+        fetch("/opinioes/cadastrarGenero", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                genero_idServer: opcaoSelecionada,
+                console_emailServer: sessionStorage.EMAIL_USUARIO
+            }),
+        })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                console.log(`<p class="verde">👍 Console Enviado com Sucesso!</p>`);
+                sessionStorage.GENERO_USUARIO = opcaoSelecionada;
+                console.log("Console:" + sessionStorage.GENERO_USUARIO);
+            } else {
+                throw "Houve um erro ao tentar realizar o cadastro do console!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function obterDadosTopConsoles() {
+        fetch(`/dashboard/topconsoles`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+                    graficoTopConsoles();
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+    }
+
+    function graficoTopConsoles(){
+        fetch("/dashboard/topconsoles")
+        .then(res => res.json())
+        .then(dados => {
+            const nomes = dados.map(item => item.nome_console);
+            const votos = dados.map(item => item.votos);
+
+            const ctx = document.getElementById("graficoConsoles").getContext("2d");
+
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: nomes,
+                    datasets: [{
+                        label: "Consoles mais populares entre os usuários",
+                        data: votos,
+                        backgroundColor: "#f77622",
+                        borderColor: "rgba(54, 162, 235, 1)",
+                        borderWidth: 0
+                        
+                    }]
+                },
+                options: {
+                    color: 'white',
+                    indexAxis: 'x', // Coloque 'x' se quiser barras verticais
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    function obterDadosGenerosPopulares() {
+        fetch(`/dashboard/generospopulares`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+                    graficoTopGeneros();
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+    }
+
+    function graficoTopGeneros(){
+        fetch("/dashboard/generospopulares")
+        .then(res => res.json())
+        .then(dados => {
+            const nomes = dados.map(item => item.nome_genero);
+            const votos = dados.map(item => item.votos);
+
+            const ctx = document.getElementById("graficoGeneros").getContext("2d");
+
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: nomes,
+                    datasets: [{
+                        label: "Genêros mais populares entre os usuários",
+                        data: votos,
+                        backgroundColor: "#0095e9",
+                        borderColor: "rgba(54, 162, 235, 1)",
+                        borderWidth: 0
+                        
+                    }]
+                },
+                options: {
+                    color: 'white',
+                    indexAxis: 'x', // Coloque 'x' se quiser barras verticais
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

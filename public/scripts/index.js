@@ -143,6 +143,8 @@ function entrar() {
                 console.log(JSON.stringify(json));
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.CONSOLE_USUARIO = json.fkConsoleFavorito;
+                sessionStorage.GENERO_USUARIO = json.fkGeneroFavorito;
                 window.location = "galeria.html";
  // apenas para exibir o loading
 

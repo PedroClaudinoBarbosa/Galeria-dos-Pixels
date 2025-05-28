@@ -15,18 +15,28 @@
             </div>
             <button onclick="sair()">❌ Sair</button>
         </div>
-        <button onclick="linhaTempo()">Linha do Tempo</button>
+        <div class="opcoes">
+            <div class="card" onclick="linha()">
+                <img src="../assets/imgs/clock.webp" alt="">
+                <h3>Linha do Tempo</h3>
+                <p>Explore a história dos videogames, desde seus primórdios até os dias atuais!</p>
+            </div>
+            <div class="card" onclick="opinioes()">
+                <img src="../assets/imgs/tribunalpixel.webp" alt="">
+                <h3>Tribunal das Opiniões</h3>
+                <p>Compartilhe e confira a opinião de outros usuários sobre consoles e gêneros de jogos.!</p>
+            </div>
+            <div class="card" onclick="linhaTempo()">
+                <img src="../assets/imgs/cartucho.webp" alt="">
+                <h3>Biblioteca do Hardware & Software</h3>
+                <p>Descubra mais sobre as tecnologias que tornaram possível levar os jogos para a tela da TV!</p>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
+<script src="scripts/navbar.js"></script>
 <script>
     b_usuario.innerHTML = `Olá <span class="amarelo">${sessionStorage.NOME_USUARIO}</span>! Boas vindas à galeria dos pixels.`;
-
-    function sair(){
-        window.location = "index.html";
-    }
-
-    function linhaTempo(){
-        window.location = "linha_do_tempo.html";
-    }
 </script>

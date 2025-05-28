@@ -15,11 +15,9 @@
     padding: 5px;
     border-radius: 20px;
 }
-
 .verde {
     color: rgb(153, 245, 125);
 }
-
 .amarelo{
     color: #fee761;
 }
@@ -31,27 +29,26 @@
 }
 
 body {
-    background-color: #0204b6;
-    overflow-x: auto;
-    overflow-y: hidden;
+    background-color: #000000;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh;
-    width: max-content; /* Importante: permite expandir horizontalmente conforme o conteúdo */
 }
  
 .galeria{
     background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.226) 100%),
-    url(../assets/imgs/sonicbackgroud.gif);
+    url(../assets/imgs/corte.webp);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     background-repeat: repeat-x;
-    background-position: bottom;
-    min-height: 100vh;
+    background-position: top;
+    background-size: cover;
+    min-height: 120vh;
+    min-width: 100vw;
 }
 
 .galeria .container {
-    background-image: linear-gradient(to bottom, #4f1869 20%, rgba(34, 87, 94, 0));
+    background-image: linear-gradient(to bottom, #000000 20%, rgba(34, 87, 94, 0));
     background-size: 100px;
     width: 100vw;
     position: fixed;
@@ -113,60 +110,78 @@ body {
     border-style: dashed;
 }
 
-.cards {
+
+.galeria .perguntas {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
-    height: auto;
-    padding-top: 1%;
-    gap: 50px;
-}
-
-.card {
-    flex: 0 0 auto; /* Impede que as cards se redimensionem e garante largura fixa */
-    width: 400px;
-}
-
-.card img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.card h3 {
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    text-align: center;
-}
-
-.card .card_container{
-    background-image: linear-gradient(to bottom, #352a9b 50%, rgb(34, 94, 86));
-    color: white;
-    max-width: 400px;
-    min-height: 530px;
-    padding: 0;
-    border-radius: 20px;
-}
-
-.card .texto {
-    padding: 20px;
-}
-
-.card .texto p{
-    text-align: justify;
-    
-}
-
-.card .texto h2{
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 70vh;
+    flex-direction: column;
     margin-bottom: 20px;
-    font-size: 25px;
-    padding-bottom: 5px;
-    border-bottom: 2px dotted orange;
-    color: #feae34;
-    text-align: center;
     
 }
 
+.galeria .perguntas img{
+    width: 300px;
+    border-bottom: #ffffff solid 2px;
+}
+
+.galeria .perguntas .card {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border: solid 1px white;
+    color: white;
+    min-width: 500px;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+.galeria .perguntas .card p{
+    margin-bottom: 10px;
+    color: #feae34;
+    font-size: 20px;
+}
+
+.galeria .perguntas select {
+    width: 100%;
+    background-color: black;
+    border: solid 1px white;
+    color:  white;
+    text-align: center;
+}
+
+#consoles_pizza {
+    width: 400px;
+
+}
+
+.graficosGeneros {
+    width: 400px;
+
+}
+
+.dashboard {
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+        background-image: 
+    linear-gradient(to bottom, #3a1b1b 0.5%, rgba(0, 0, 0, 0.815));
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    border-style: dashed;
+    padding: 10px;
+}
+
+.dashboard .graficosConsoles{
+    display:  flex;
+    gap: 50px;
+    flex-direction: row;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}

@@ -16,8 +16,8 @@
                     </div>
                 
                     <button onclick="salao()">Salão Principal</button>
-                    <button onclick="salao()">Tecnoteca</button>                            
-                    <button onclick="salao()">Salão das Opiniões</button>
+                    <button onclick="opinioes()">Tribunal das Opiniões</button>
+                    <button onclick="salao()">Biblioteca do Hardware & Software</button>                            
             </div>
         </div>
         <div class="cards">
@@ -298,18 +298,9 @@
     </div>
 </body>
 </html>
+<script src="scripts/navbar.js"></script>
 <script>
     b_usuario.innerHTML = `<span class="amarelo">${sessionStorage.NOME_USUARIO}</span>`;
-
-    function sair(){
-        window.location = "index.html";
-    }
-
-    function salao(){
-        window.location = "galeria.html";
-    }
-
-
   window.addEventListener("wheel", function (e) {
     // Impede o scroll vertical padrão
     e.preventDefault();
