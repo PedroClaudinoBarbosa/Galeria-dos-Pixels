@@ -39,7 +39,7 @@
 
   background-image: 
     url(../assets/imgs/nuvem.webp),
-    linear-gradient(to bottom, rgb(31, 10, 121) 10%, rgba(0, 0, 0, 0)),
+    linear-gradient(to bottom, rgb(26, 16, 103) 10%, rgba(0, 0, 0, 0)),
     url(../assets/imgs/background_inicio.webp);
 
   background-position: 0 bottom, center bottom, center bottom;
@@ -81,11 +81,13 @@
 
 .prologo button {
     padding: 1.2vw 2.5vw 1.2vw 2.5vw;
-
+    background-image: url(../assets/imgs/block.webp);
+    background-size: 12%;
     background-color: rgba(41, 49, 140, 0.723);
-    border: solid 1px rgb(255, 212, 39);
-
-    color: rgb(246, 157, 63);
+    border: solid 2px rgb(10, 4, 4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 20);
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
     font-size: 1.2vw;
     text-transform: uppercase;
     font-weight: 900;
@@ -95,7 +97,7 @@
 
 .prologo button:hover {
     background-color: rgba(0, 0, 0, 0.615);
-    border: solid white 1px;
+    border: solid white 2px;
     padding: 15px 40px;
     margin: 20px;
     font-size: 18px;
@@ -176,8 +178,8 @@
     position: fixed;
     top: 60%;
     left: 50%;
-    min-width: 64px;
-    min-height: 64px;
+    min-width: 4vw;
+    min-height: 4vw;
     background-image: url(../assets/imgs/mario_meio.webp);
     background-repeat: no-repeat;
     background-size: contain;

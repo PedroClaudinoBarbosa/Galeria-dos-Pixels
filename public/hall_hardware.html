@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria dos Pixels</title>
+    <link rel="stylesheet" href="styles/style_hall_hardware.css">
+</head>
+<body>
+    <div class="galeria">
+        <div class="container">
+            <div class="nav_bar">
+                    <div class="usuario">
+                    <img src="../assets/imgs/kratos.webp" alt="">
+                    <h3 id="b_usuario"></h3>
+                    </div>
+                
+                    <button onclick="salao()">Salão Principal</button>
+                    <button onclick="linha()">Linha do Tempo</button>
+                    <button onclick="hardware()">Biblioteca do Hardware & Software</button>         
+                    <button onclick="salao()">Hall das Curiosidades</button>                    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="scripts/navbar.js"></script>
+<script>
+        window.onload = function () {
+        // Exibe o nome do usuário
+        b_usuario.innerHTML = `<span class="amarelo">${sessionStorage.NOME_USUARIO}</span>`;
+    };
+</script>

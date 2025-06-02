@@ -13,3 +13,7 @@ function opinioes(){
 function linha(){
     window.location = "linha_do_tempo.html";
 }
+
+function hardware(){
+    window.location = "hall_hardware.html";
+}
