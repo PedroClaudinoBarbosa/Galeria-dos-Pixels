@@ -38,11 +38,11 @@ body {
 .galeria{
     background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.226) 100%),
-    url(../assets/imgs/retrowave.webp);
+    url(../assets/imgs/matrix.webp);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     background-position: top;
-    background-size: cover;
+    background-size: 40%;
     min-height: 100vh;
     min-width: 100vw;
 }
@@ -115,11 +115,12 @@ body {
 
 .galeria .perguntas {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    width: 80%;
+    min-height: 100vh;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin: 0 auto;
     
 }
 
@@ -184,6 +185,11 @@ body {
 }
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 249, 72);
     font-size: 50px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
 }
