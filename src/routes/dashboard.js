@@ -19,4 +19,8 @@ router.get("/obterDadosJogosFavoritos", function (req, res) {
     medidaController.obterDadosJogosFavoritos(req, res);
 });
 
+router.get("/atualizarSelects", function (req, res) {
+    medidaController.atualizarSelects(req, res);
+});
+
 module.exports = router;

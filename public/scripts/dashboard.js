@@ -81,22 +81,8 @@ function generoSelecionado() {
     });
 }
 
-function obterDadosConsolesGeracao() {
-    fetch(`/dashboard/geracao`, { cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (resposta) {
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                resposta.reverse();
-                graficoGeracao();
-            });
-        } else {
-            console.error('Nenhum dado encontrado ou erro na API');
-        }
-    })
-    .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    });
-}
+obterDadosConsolesGeracao();
+let graficoGeracaoConsoles = null;
 
 function graficoGeracao(){
 fetch('/dashboard/geracao')
@@ -106,10 +92,16 @@ fetch('/dashboard/geracao')
         const valores = dados.map(item => item.quantidade_usuarios);
 
         const ctx = document.getElementById('graficoPizza').getContext('2d');
-        const graficoPizza = new Chart(ctx, {
+
+        if (graficoGeracaoConsoles){
+            graficoGeracaoConsoles.destroy();
+        }
+        graficoGeracaoConsoles = new Chart(ctx, {
             type: 'pie',
             data: {
+                
                 labels: labels,
+                label: 'Quantidade de usuários',
                 datasets: [{
                     data: valores,
                     backgroundColor: [
@@ -131,7 +123,7 @@ fetch('/dashboard/geracao')
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'bottom',
+                        position: 'top',
                     },
                     title: {
                         display: true,
@@ -144,6 +136,23 @@ fetch('/dashboard/geracao')
     })
     .catch(erro => {
         console.error("Erro ao carregar dados do gráfico:", erro);
+    });
+}
+
+function obterDadosConsolesGeracao() {
+    fetch(`/dashboard/geracao`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+                graficoGeracao();
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+    .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
     });
 }
 
@@ -195,6 +204,9 @@ function obterDadosTopConsoles() {
     });
 }
 
+
+obterDadosGenerosPopulares();
+let graficoGenerosPopulares = null;
 function graficoTopConsoles(){
     fetch("/dashboard/topconsoles")
     .then(res => res.json())
@@ -204,14 +216,65 @@ function graficoTopConsoles(){
 
         const ctx = document.getElementById("graficoConsoles").getContext("2d");
 
-        new Chart(ctx, {
+        if (graficoGenerosPopulares){
+            graficoGenerosPopulares.destroy();
+        }
+
+        graficoGenerosPopulares = new Chart(ctx, {
             type: "bar",
             data: {
                 labels: nomes,
                 datasets: [{
-                    label: "Consoles",
+                    label: 'Quantidade de usuários',
                     data: votos,
                     backgroundColor: "#8f32a8",
+                    borderColor: "white",
+                    borderWidth: 2
+                    
+                }]
+            },
+            options: {
+                color: 'white',
+                indexAxis: 'x', // Coloque 'x' se quiser barras verticais
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    });
+}
+
+
+obterDadosGenerosPopulares();
+
+let graficoGeneros = null;
+
+function graficoTopGeneros(){
+    fetch("/dashboard/generospopulares")
+    .then(res => res.json())
+    .then(dados => {
+        const nomes = dados.map(item => item.nome_genero);
+        const votos = dados.map(item => item.votos);
+
+        const ctx = document.getElementById("graficoGeneros").getContext("2d");
+
+        if (graficoGeneros) {
+            graficoGeneros.destroy();
+        }
+
+        graficoGeneros = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: nomes,
+                datasets: [{
+                    label: 'Quantidade de usuários',
+                    data: votos,
+                    backgroundColor: "#0095e9",
                     borderColor: "white",
                     borderWidth: 2
                     
@@ -250,40 +313,6 @@ function obterDadosGenerosPopulares() {
     });
 }
 
-function graficoTopGeneros(){
-    fetch("/dashboard/generospopulares")
-    .then(res => res.json())
-    .then(dados => {
-        const nomes = dados.map(item => item.nome_genero);
-        const votos = dados.map(item => item.votos);
-
-        const ctx = document.getElementById("graficoGeneros").getContext("2d");
-
-        new Chart(ctx, {
-            type: "bar",
-            data: {
-                labels: nomes,
-                datasets: [{
-                    label: "Genêros",
-                    data: votos,
-                    backgroundColor: "#0095e9",
-                    borderColor: "white",
-                    borderWidth: 2
-                    
-                }]
-            },
-            options: {
-                color: 'white',
-                indexAxis: 'x', // Coloque 'x' se quiser barras verticais
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1
-                        }
-                    }
-                }
-            }
-        });
-    });
-}
+setInterval(obterDadosGenerosPopulares, 10000);
+setInterval(obterDadosTopConsoles, 10000);
+setInterval(obterDadosConsolesGeracao, 10000);

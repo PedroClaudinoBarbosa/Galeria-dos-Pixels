@@ -61,6 +61,7 @@ function buscarTopGeneros() {
     return database.executar(instrucaoSql);
 }
 
+
 function obterDadosJogosFavoritos() {
 
     var instrucaoSql = `
@@ -75,10 +76,21 @@ function obterDadosJogosFavoritos() {
     return database.executar(instrucaoSql);
 }
 
+function atualizarSelects(idUsuario) {
+    var instrucaoSql = `
+    SELECT fkIdJogoFavorito
+    FROM usuario_jogo_favorito
+    WHERE fkIdUsuario = ${idUsuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 
 module.exports = {
     buscarGeracaoConsoles,
     buscarTopConsoles,
     buscarTopGeneros,
-    obterDadosJogosFavoritos
+    obterDadosJogosFavoritos,
+    atualizarSelects
 }

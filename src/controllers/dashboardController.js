@@ -48,10 +48,28 @@ function obterDadosJogosFavoritos(req, res) {
     });
 }
 
+function atualizarSelects(req, res) {
+    // Obter o ID do usuário dos parâmetros da requisição
+    var idUsuario = req.query.idUsuario;
+    
+    if (!idUsuario) {
+        return res.status(400).json({ error: "ID do usuário não fornecido" });
+    }
+
+    medidaModel.atualizarSelects(idUsuario).then(function (resultado) {
+        res.status(200).json(resultado);
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os jogos favoritos.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 
 module.exports = {
     buscarGeracao,
     buscarTopConsoles,
     buscarTopGeneros,
-    obterDadosJogosFavoritos
+    obterDadosJogosFavoritos,
+    atualizarSelects
 }

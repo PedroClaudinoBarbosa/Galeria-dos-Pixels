@@ -275,7 +275,7 @@
     <div class="dashboard">
         <div class="graficosConsoles">
             <div id="consoles_pizza">
-                <h3>Consoles Favoritos dos Usuários por Geração</h3>
+                <h3>Consoles favoritos dos usuários por geração</h3>
                 <canvas id="graficoPizza" width="400" height="400"></canvas>
             </div>
             <div>
@@ -300,6 +300,59 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+let graficoJogos = null; // Variável global para armazenar a instância do gráfico
+atualizarGraficoJogos();
+function graficoJogosFavoritos(){
+    fetch("/dashboard/obterDadosJogosFavoritos")
+    .then(res => res.json())
+    .then(dados => {
+        const nomes = dados.map(item => item.nome_jogo);
+        const votos = dados.map(item => item.quantidade_usuarios);
+
+        const ctx = document.getElementById("graficosJogos").getContext("2d");
+        
+        // Destruir o gráfico anterior se existir
+        if (graficoJogos) {
+            graficoJogos.destroy();
+        }
+        
+        graficoJogos = new Chart(ctx, {
+            type: "doughnut",
+            data: {
+                labels: nomes,
+                datasets: [{
+                    label: 'Quantidade de usuários',
+                    data: votos,
+                    backgroundColor: [
+                        '#E6194B', '#3CB44B', '#FFE119', '#4363D8', 
+                        '#F58231', '#911EB4', '#46F0F0', '#F032E6',
+                        '#BCF60C', '#FABEBE'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: 'white',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    duration: 1000
+                }
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Erro ao obter dados:', error);
+    });
+}
 
 // Inserir Jogos Favoritos
 function checkboxMudou(checkbox) {
@@ -364,70 +417,75 @@ function checkboxMudou(checkbox) {
 
 // Puxar Jogos Favoritos
 
-
-    fetch(`/dashboard/obterDadosJogosFavoritos`, { cache: 'no-store' }).then(function (response) {
+function atualizarGraficoJogos(){
+    fetch(`/dashboard/obterDadosJogosFavoritos`, { cache: 'no-store' })
+    .then(function (response) {
         if (response.ok) {
-            response.json().then(function (resposta) {
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                resposta.reverse();
-                 graficoJogosFavoritos();
-            });
-        } else {
-            console.error('Nenhum dado encontrado ou erro na API');
+            return response.json();
         }
+        throw new Error('Erro na resposta da API');
+    })
+    .then(function (resposta) {
+        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+        resposta.reverse();
+        graficoJogosFavoritos();
     })
     .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        console.error(`Erro na obtenção dos dados: ${error.message}`);
     });
+}
+setInterval(atualizarGraficoJogos, 10000);
 
 
-function graficoJogosFavoritos(){
-    fetch("/dashboard/obterDadosJogosFavoritos")
-    .then(res => res.json())
-    .then(dados => {
-        const nomes = dados.map(item => item.nome_jogo);
-        const votos = dados.map(item => item.quantidade_usuarios);
+function atualizarSelects() {
+    // Obter o ID do usuário do sessionStorage
+    const idUsuario = sessionStorage.ID_USUARIO;
+    
+    if (!idUsuario) {
+        console.error("ID do usuário não encontrado no sessionStorage");
+        return;
+    }
 
-        const ctx = document.getElementById("graficosJogos").getContext("2d");
-
-        new Chart(ctx, {
-            type: "doughnut",
-            data: {
-                labels: nomes,
-                datasets: [{
-                    label: 'Jogos mais populares entre os usuários',
-                    data: votos,
-                    backgroundColor: [
-                    '#E6194B', // vermelho vivo
-                    '#3CB44B', // verde vibrante
-                    '#FFE119', // amarelo limão
-                    '#4363D8', // azul forte
-                    '#F58231', // laranja queimado
-                    '#911EB4', // roxo escuro
-                    '#46F0F0', // ciano claro
-                    '#F032E6', // magenta
-                    '#BCF60C', // verde limão
-                    '#FABEBE'  // rosa claro
-                    ],
-                    borderWidth: 2
-                    
-                }]
-            },
-            options: {
-                color: 'white',
-                indexAxis: 'x', // Coloque 'x' se quiser barras verticais
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1
-                        }
-                    }
-                }
+    fetch(`/dashboard/atualizarSelects?idUsuario=${idUsuario}`, { 
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Erro na resposta da API');
+    })
+    .then(function (resposta) {
+        console.log(`Jogos favoritos do usuário: ${JSON.stringify(resposta)}`);
+        
+        // Desmarcar todos os checkboxes primeiro
+        document.querySelectorAll('input[name="jogoFavorito"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        
+        // Marcar os checkboxes dos jogos favoritos do usuário
+        resposta.forEach(jogo => {
+            const checkbox = document.querySelector(`input[name="jogoFavorito"][value="${jogo.fkIdJogoFavorito}"]`);
+            if (checkbox) {
+                checkbox.checked = true;
             }
         });
+    })
+    .catch(function (error) {
+        console.error(`Erro ao obter jogos favoritos: ${error.message}`);
     });
 }
 
-
+// Chamar a função quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    // Certifique-se que o ID_USUARIO está no sessionStorage
+    if (sessionStorage.ID_USUARIO) {
+        atualizarSelects();
+    } else {
+        console.error("Usuário não autenticado");
+    }
+});
 </script>
