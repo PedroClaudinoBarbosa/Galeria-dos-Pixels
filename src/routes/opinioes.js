@@ -11,4 +11,12 @@ router.post("/cadastrarConsole", function (req, res) {
 router.post("/cadastrarGenero", function (req, res) {
     opinioesController.cadastrarGenero(req, res);
 })
+
+router.post("/cadastrarJogoFavorito", function (req, res) {
+    opinioesController.cadastrarJogoFavorito(req, res);
+})
+
+router.post("/removerJogoFavorito", function (req, res) {
+    opinioesController.removerJogoFavorito(req, res);
+})
 module.exports = router;

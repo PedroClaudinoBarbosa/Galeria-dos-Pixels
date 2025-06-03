@@ -158,16 +158,137 @@
                 </select>
             </div>
         </div>
-        <div class="dashboard">
-            <div class="graficosConsoles">
-                <div id="consoles_pizza">
-                    <canvas id="graficoPizza" width="400" height="400"></canvas>
-                </div>
-                <div>
-                    <canvas id="graficoConsoles" width="400" height="400"></canvas>
-                </div>
+
+    <h2>Jogos Favoritos</h2>
+    <div id="jogosFavoritos" class="jogosFavoritos">
+        <fieldset>
+            <legend>Plataforma</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="1" onchange="checkboxMudou(this)"> Super Mario Bros.</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="3" onchange="checkboxMudou(this)"> Sonic the Hedgehog</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Aventura de Ação</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="2" onchange="checkboxMudou(this)"> The Legend of Zelda</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="26" onchange="checkboxMudou(this)"> Among Us</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Metroidvania</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="4" onchange="checkboxMudou(this)"> Metroid</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="5" onchange="checkboxMudou(this)"> Castlevania: Symphony of the Night</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>JRPG</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="6" onchange="checkboxMudou(this)"> Final Fantasy VII</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="7" onchange="checkboxMudou(this)"> Chrono Trigger</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>RPG de Ação</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="8" onchange="checkboxMudou(this)"> The Elder Scrolls V: Skyrim</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="19" onchange="checkboxMudou(this)"> Dark Souls</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>MMORPG</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="9" onchange="checkboxMudou(this)"> World of Warcraft</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Simulação de Vida</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="10" onchange="checkboxMudou(this)"> Stardew Valley</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="11" onchange="checkboxMudou(this)"> The Sims</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Simulação de Construção e Gestão</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="12" onchange="checkboxMudou(this)"> SimCity 2000</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sandbox</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="13" onchange="checkboxMudou(this)"> Minecraft</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Puzzle</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="14" onchange="checkboxMudou(this)"> Tetris</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Quebra-cabeça Lógico</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="15" onchange="checkboxMudou(this)"> Portal</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>RTS (Tempo Real)</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="16" onchange="checkboxMudou(this)"> League of Legends</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="17" onchange="checkboxMudou(this)"> Age of Empires II</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>4X</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="18" onchange="checkboxMudou(this)"> Civilization VI</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Roguelike / Roguelite</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="20" onchange="checkboxMudou(this)"> Hades</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>FPS</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="21" onchange="checkboxMudou(this)"> DOOM (1993)</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="22" onchange="checkboxMudou(this)"> Halo: Combat Evolved</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="23" onchange="checkboxMudou(this)"> Overwatch</label><br>
+            <label><input type="checkbox" name="jogoFavorito" value="24" onchange="checkboxMudou(this)"> Call of Duty: Modern Warfare</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Battle Royale</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="25" onchange="checkboxMudou(this)"> Fortnite</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Survival</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="27" onchange="checkboxMudou(this)"> Resident Evil 4</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hack and Slash</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="28" onchange="checkboxMudou(this)"> Bayonetta</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ritmo</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="29" onchange="checkboxMudou(this)"> Guitar Hero III: Legends of Rock</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dança</legend>
+            <label><input type="checkbox" name="jogoFavorito" value="30" onchange="checkboxMudou(this)"> Just Dance 2024</label><br>
+        </fieldset>
+    </div>
+        
+    <div class="dashboard">
+        <div class="graficosConsoles">
+            <div id="consoles_pizza">
+                <h3>Consoles Favoritos dos Usuários por Geração</h3>
+                <canvas id="graficoPizza" width="400" height="400"></canvas>
+            </div>
+            <div>
+                <h3>Consoles mais populares entre os usuários</h3>
+                <canvas id="graficoConsoles" width="400" height="400"></canvas>
+            </div>
             <div class="graficosGeneros">
+                <h3>Genêros mais populares entre os usuários</h3>
                 <canvas id="graficoGeneros" width="400" height="400"></canvas>
+            </div>
+            <div class="graficosJogos">
+                <h3>Jogos mais populares entre os usuários</h3>
+                <canvas id="graficosJogos" width="400" height="400"></canvas>
             </div>
         </div>
     </div>
@@ -175,296 +296,138 @@
 </body>
 </html>
 <script src="scripts/navbar.js"></script>
-<script>
-    window.onload = function () {
-        const consoleSalvo = sessionStorage.CONSOLE_USUARIO;
-        const generoSalvo = sessionStorage.GENERO_USUARIO;
-
-        if (consoleSalvo) {
-            const selectConsole = document.getElementById("consoleFavorito");
-            selectConsole.value = consoleSalvo;
-        }
-        if (generoSalvo) {
-            const selectGenero = document.getElementById("generoFavorito");
-            selectGenero.value = generoSalvo;
-        }
-
-        // Exibe o nome do usuário
-        b_usuario.innerHTML = `<span class="amarelo">${sessionStorage.NOME_USUARIO}</span>`;
-
-        obterDadosConsolesGeracao();
-        obterDadosTopConsoles();
-        obterDadosGenerosPopulares();
-    };
-
-    function consoleSelecionado() {
-        const opcaoSelecionada = consoleFavorito.value;
-        console.log("Console selecionado:", opcaoSelecionada);
-        console.log(sessionStorage.EMAIL_USUARIO);
-
-        fetch("/opinioes/cadastrarConsole", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                console_idServer: opcaoSelecionada,
-                console_emailServer: sessionStorage.EMAIL_USUARIO
-            }),
-        })
-        .then(function (resposta) {
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                console.log(`<p class="verde">👍 Console Enviado com Sucesso!</p>`);
-                sessionStorage.CONSOLE_USUARIO = opcaoSelecionada;
-                console.log("Console:" + sessionStorage.CONSOLE_USUARIO);
-            } else {
-                throw "Houve um erro ao tentar realizar o cadastro do console!";
-            }
-        })
-        .catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-    }
-    function generoSelecionado() {
-        const opcaoSelecionada = generoFavorito.value;
-        console.log("Genero selecionado:", opcaoSelecionada);
-        console.log(sessionStorage.EMAIL_USUARIO);
-
-        fetch("/opinioes/cadastrarGenero", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                genero_idServer: opcaoSelecionada,
-                console_emailServer: sessionStorage.EMAIL_USUARIO
-            }),
-        })
-        .then(function (resposta) {
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                console.log(`<p class="verde">👍 Console Enviado com Sucesso!</p>`);
-                sessionStorage.GENERO_USUARIO = opcaoSelecionada;
-                console.log("Console:" + sessionStorage.GENERO_USUARIO);
-            } else {
-                throw "Houve um erro ao tentar realizar o cadastro do console!";
-            }
-        })
-        .catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-    }
-
-    function obterDadosConsolesGeracao() {
-        fetch(`/dashboard/geracao`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
-                    graficoGeracao();
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-    }
-
-    function graficoGeracao(){
-    fetch('/dashboard/geracao')
-        .then(res => res.json())
-        .then(dados => {
-            const labels = dados.map(item => item.geracao_console);
-            const valores = dados.map(item => item.quantidade_usuarios);
-
-            const ctx = document.getElementById('graficoPizza').getContext('2d');
-            const graficoPizza = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Consoles Favoritos dos Usuários por Geração',
-                        data: valores,
-                        backgroundColor: [
-                            '#5a6988',
-                            '#66E5ED', 
-                            '#1E49A3', 
-                            '#43F048', 
-                            '#F9C38A', 
-                            '#7E150A',
-                            '#F8B509', 
-                            '#F2305E', 
-                            '#7D1B7E',
-                            '#181425' 
-                        ],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                        },
-                        title: {
-                            display: true,
-                            color: 'white',
-                            text: 'Consoles Favoritos dos Usuários por Geração',
-     
-                        }
-                    }
-                }
-            });
-        })
-        .catch(erro => {
-            console.error("Erro ao carregar dados do gráfico:", erro);
-        });
-    }
-
-    function generoSelecionado() {
-        const opcaoSelecionada = generoFavorito.value;
-        console.log("Genero selecionado:", opcaoSelecionada);
-        console.log(sessionStorage.EMAIL_USUARIO);
-
-        fetch("/opinioes/cadastrarGenero", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                genero_idServer: opcaoSelecionada,
-                console_emailServer: sessionStorage.EMAIL_USUARIO
-            }),
-        })
-        .then(function (resposta) {
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                console.log(`<p class="verde">👍 Console Enviado com Sucesso!</p>`);
-                sessionStorage.GENERO_USUARIO = opcaoSelecionada;
-                console.log("Console:" + sessionStorage.GENERO_USUARIO);
-            } else {
-                throw "Houve um erro ao tentar realizar o cadastro do console!";
-            }
-        })
-        .catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-    }
-
-    function obterDadosTopConsoles() {
-        fetch(`/dashboard/topconsoles`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
-                    graficoTopConsoles();
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-    }
-
-    function graficoTopConsoles(){
-        fetch("/dashboard/topconsoles")
-        .then(res => res.json())
-        .then(dados => {
-            const nomes = dados.map(item => item.nome_console);
-            const votos = dados.map(item => item.votos);
-
-            const ctx = document.getElementById("graficoConsoles").getContext("2d");
-
-            new Chart(ctx, {
-                type: "bar",
-                data: {
-                    labels: nomes,
-                    datasets: [{
-                        label: "Consoles mais populares entre os usuários",
-                        data: votos,
-                        backgroundColor: "#8f32a8",
-                        borderColor: "#632e8f",
-                        borderWidth: 2
-                        
-                    }]
-                },
-                options: {
-                    color: 'white',
-                    indexAxis: 'x', // Coloque 'x' se quiser barras verticais
-                    scales: {
-                        x: {
-                            beginAtZero: true,
-                            ticks: {
-                                stepSize: 1
-                            }
-                        }
-                    }
-                }
-            });
-        });
-    }
-
-    function obterDadosGenerosPopulares() {
-        fetch(`/dashboard/generospopulares`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
-                    graficoTopGeneros();
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-    }
-
-    function graficoTopGeneros(){
-        fetch("/dashboard/generospopulares")
-        .then(res => res.json())
-        .then(dados => {
-            const nomes = dados.map(item => item.nome_genero);
-            const votos = dados.map(item => item.votos);
-
-            const ctx = document.getElementById("graficoGeneros").getContext("2d");
-
-            new Chart(ctx, {
-                type: "bar",
-                data: {
-                    labels: nomes,
-                    datasets: [{
-                        label: "Genêros mais populares entre os usuários",
-                        data: votos,
-                        backgroundColor: "#0095e9",
-                        borderColor: "rgba(54, 162, 235, 1)",
-                        borderWidth: 0
-                        
-                    }]
-                },
-                options: {
-                    color: 'white',
-                    indexAxis: 'x', // Coloque 'x' se quiser barras verticais
-                    scales: {
-                        x: {
-                            beginAtZero: true,
-                            ticks: {
-                                stepSize: 1
-                            }
-                        }
-                    }
-                }
-            });
-        });
-    }
-</script>
+<script src="scripts/dashboard.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+// Inserir Jogos Favoritos
+function checkboxMudou(checkbox) {
+  if (checkbox.checked) {
+    const opcaoSelecionada = checkbox.value;
+    console.log("Console Marcado:", opcaoSelecionada);
+    console.log(sessionStorage.EMAIL_USUARIO);
+
+    fetch("/opinioes/cadastrarJogoFavorito", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            console_jogoFavoritoServer: opcaoSelecionada,
+            console_idUsuarioServer: sessionStorage.ID_USUARIO
+        }),
+    })
+    .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            console.log(`<p class="verde">👍 Jogo Enviado com Sucesso!</p>`);
+            console.log("Console:" + sessionStorage.CONSOLE_USUARIO);
+        } else {
+            throw "Houve um erro ao tentar realizar o cadastro do console!";
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+  } else {
+    const opcaoSelecionada = checkbox.value;
+    console.log("Console Marcado:", opcaoSelecionada);
+    console.log(sessionStorage.EMAIL_USUARIO);
+
+    fetch("/opinioes/removerJogoFavorito", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            console_jogoFavoritoServer: opcaoSelecionada,
+            console_idUsuarioServer: sessionStorage.ID_USUARIO
+        }),
+    })
+    .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            console.log(`<p class="verde">👍 Jogo Removido com Sucesso!</p>`);
+            console.log("Console:" + sessionStorage.CONSOLE_USUARIO);
+        } else {
+            throw "Houve um erro ao tentar realizar o cadastro do console!";
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+  }
+}
+
+// Puxar Jogos Favoritos
+
+
+    fetch(`/dashboard/obterDadosJogosFavoritos`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+                 graficoJogosFavoritos();
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+    .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+
+
+function graficoJogosFavoritos(){
+    fetch("/dashboard/obterDadosJogosFavoritos")
+    .then(res => res.json())
+    .then(dados => {
+        const nomes = dados.map(item => item.nome_jogo);
+        const votos = dados.map(item => item.quantidade_usuarios);
+
+        const ctx = document.getElementById("graficosJogos").getContext("2d");
+
+        new Chart(ctx, {
+            type: "doughnut",
+            data: {
+                labels: nomes,
+                datasets: [{
+                    label: 'Jogos mais populares entre os usuários',
+                    data: votos,
+                    backgroundColor: [
+                    '#E6194B', // vermelho vivo
+                    '#3CB44B', // verde vibrante
+                    '#FFE119', // amarelo limão
+                    '#4363D8', // azul forte
+                    '#F58231', // laranja queimado
+                    '#911EB4', // roxo escuro
+                    '#46F0F0', // ciano claro
+                    '#F032E6', // magenta
+                    '#BCF60C', // verde limão
+                    '#FABEBE'  // rosa claro
+                    ],
+                    borderWidth: 2
+                    
+                }]
+            },
+            options: {
+                color: 'white',
+                indexAxis: 'x', // Coloque 'x' se quiser barras verticais
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    });
+}
+
+
+</script>

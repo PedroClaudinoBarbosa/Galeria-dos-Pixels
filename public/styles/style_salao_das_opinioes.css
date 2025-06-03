@@ -179,6 +179,11 @@ body {
 
 .dashboard .graficosConsoles{
     display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 600px;
+    padding: 50px;
     gap: 50px;
     flex-direction: row;
 }
@@ -186,4 +191,30 @@ body {
 h1 {
     color: rgb(255, 255, 255);
     font-size: 50px;
+}
+
+.jogosFavoritos {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.jogosFavoritos fieldset {
+    background-color: rgba(0, 0, 0, 0.726);
+    color: white;
+    width: 200px;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    color: white;
 }

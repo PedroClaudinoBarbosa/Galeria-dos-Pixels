@@ -33,7 +33,7 @@ function buscarTopConsoles() {
         c.idConsole, c.nome
     ORDER BY 
         votos DESC
-    LIMIT 5;`;
+    LIMIT 10;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -55,14 +55,30 @@ function buscarTopGeneros() {
         g.idGenero, g.nome
     ORDER BY 
         votos DESC
-    LIMIT 5;`;
+    LIMIT 10;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
+function obterDadosJogosFavoritos() {
+
+    var instrucaoSql = `
+    SELECT jf.nome AS nome_jogo, COUNT(ujf.fkIdUsuario) AS quantidade_usuarios
+    FROM usuario_jogo_favorito ujf
+    JOIN jogo_favorito jf ON ujf.fkIdJogoFavorito = jf.idJogo
+    GROUP BY jf.nome
+    ORDER BY quantidade_usuarios DESC
+    LIMIT 10;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
 module.exports = {
     buscarGeracaoConsoles,
     buscarTopConsoles,
-    buscarTopGeneros
+    buscarTopGeneros,
+    obterDadosJogosFavoritos
 }

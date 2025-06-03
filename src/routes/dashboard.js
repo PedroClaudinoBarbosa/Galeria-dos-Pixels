@@ -15,4 +15,8 @@ router.get("/generospopulares", function (req, res) {
     medidaController.buscarTopGeneros(req, res);
 });
 
+router.get("/obterDadosJogosFavoritos", function (req, res) {
+    medidaController.obterDadosJogosFavoritos(req, res);
+});
+
 module.exports = router;
