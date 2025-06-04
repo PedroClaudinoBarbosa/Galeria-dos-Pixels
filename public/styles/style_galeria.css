@@ -104,6 +104,7 @@ body {
 .galeria .card:hover {
     padding-bottom: 20px;
     cursor: pointer;
+    box-shadow: 0px 0px 300px rgb(87, 31, 255);
 }
 
 

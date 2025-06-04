@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url(../assets/fonts/PixelifySans.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+#b_usuario {
+  text-transform: capitalize;
+}
+
+.vermelho {
+    color: rgb(252, 138, 138);
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 5px;
+    border-radius: 40px;
+}
+.verde {
+    color: rgb(153, 245, 125);
+}
+.amarelo{
+    color: #fee761;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.apresentacao h3 {
+    width: 40%;
+    margin-top: 40px;
+    color: white;
+    font-weight: 100;
+}
+
+.galeria{
+    background-image:
+    
+    url(../assets/imgs/universe.webp);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background-repeat: repeat;
+    background-position: top;
+    min-width: auto;
+    animation: moverNuvens 6000s linear infinite;
+}
+@keyframes moverNuvens {
+  0% {
+    background-position: bottom 0px center;
+  }
+  100% {
+    background-position: bottom +200000px  center;
+  }
+}
+
+.galeria .container {
+    background-image: linear-gradient(to bottom, #000000 20%, rgba(34, 87, 94, 0));
+    background-size: 100px;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+}
+
+.galeria .container .nav_bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.galeria .container .nav_bar .usuario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.galeria .container h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.galeria .container img {
+    width: 52px;
+    height: 52px;
+    border: solid 2px white;
+    object-fit: cover;
+    margin: 0px 10px 10px 0px;
+    border-style: dashed;
+    border-radius: 40px;
+}
+
+.galeria .container {
+    padding: 22px 0px 22px 0px;
+    display: flex;
+}
+
+.galeria .container button {
+    margin-left: 5%;
+    padding: 5px 15px 5px 15px;
+    border-radius: 40px;
+    font-size: 15px;
+    justify-self: flex-start;
+    background-color: rgba(11, 33, 61, 0.185);
+    color: white;
+    border: solid 1px white;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.galeria .container button:hover {
+    font-size: 18px;
+    color: #feae34;
+    border: solid 2px #f77622;
+    cursor: pointer;
+    border-style: dashed;
+}
+
+
+.galeria .apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 80vh;
+    flex-direction: column;
+    margin: 0 auto;
+    
+}
+
+.galeria .apresentacao img{
+    width: 200px;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 50px;
+    -webkit-animation: rainbow 5s infinite, rainbowtextshadow 5s infinite; 
+    border-bottom: dashed 2px;
+}
+
+@keyframes rainbow{
+ 0%{color: orange;}
+ 10%{color: purple;}
+ 20%{color: red;}
+ 30%{color: CadetBlue;}
+ 40%{color: yellow;}
+ 50%{color: coral;}
+ 60%{color: green;}
+ 70%{color: cyan;}
+ 80%{color: DeepPink;}
+ 90%{color: DodgerBlue;}
+ 100%{color: orange;}
+}
+
+@keyframes rainbowtextshadow{
+ 0%{text-shadow:  0px 0px 40px orange;}
+ 10%{text-shadow:  0px 0px 40px purple;}
+ 20%{text-shadow:  0px 0px 40px red;}
+ 30%{text-shadow: 0px 0px 40px CadetBlue;}
+ 40%{text-shadow: 0px 0px 40px yellow;}
+ 50%{text-shadow: 0px 0px 40px coral;}
+ 60%{text-shadow: 0px 0px 40px green;}
+ 70%{text-shadow: 0px 0px 40px cyan;}
+ 80%{text-shadow: 0px 0px 40px DeepPink;}
+ 90%{text-shadow: 0px 0px 40px DodgerBlue;}
+ 100%{text-shadow: 0px 0px 40px orange;}
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+.artigo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    color:  white;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.artigo img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.artigo img:hover {
+    width: 500px;
+    height: 300px;
+    border-radius: 0px;
+    -webkit-animation: rainbowbox 5s infinite, rainbowborder 5s infinite;
+}
+
+@keyframes rainbowbox{
+ 0%{box-shadow: 0px 0px 40px orange;}
+ 10%{box-shadow: 0px 0px 40px purple;}
+ 20%{box-shadow: 0px 0px 40px red;}
+ 30%{box-shadow:0px 0px 40px CadetBlue;}
+ 40%{box-shadow:0px 0px 40px yellow;}
+ 50%{box-shadow:0px 0px 40px coral;}
+ 60%{box-shadow:0px 0px 40px green;}
+ 70%{box-shadow:0px 0px 40px cyan;}
+ 80%{box-shadow:0px 0px 40px DeepPink;}
+ 90%{box-shadow:0px 0px 40px DodgerBlue;}
+ 100%{box-shadow:0px 0px 40px orange;}
+}
+
+@keyframes rainbowborder{
+ 0%{border:  solid 2px orange;}
+ 10%{border:  solid 2px purple;}
+ 20%{border:  solid 2px red;}
+ 30%{border: solid 2px CadetBlue;}
+ 40%{border: solid 2px yellow;}
+ 50%{border: solid 2px coral;}
+ 60%{border: solid 2px green;}
+ 70%{border: solid 2px cyan;}
+ 80%{border: solid 2px DeepPink;}
+ 90%{border: solid 2px DodgerBlue;}
+ 100%{border: solid 2px orange;}
+}
+
+.artigo .texto {
+    width: 40%;
+    text-align: justify;
+    transition: 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.723);
+    padding: 10px;
+}
+
+.artigo .texto h4{
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: yellow;
+    text-shadow: 0px 0px 40px yellow;
+}
+
+.artigo .texto p{
+    font-size: 22px;
+}
+
+.artigo_sombreado {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background-image:
+    linear-gradient(to bottom, #0000009c 100%, rgba(0, 0, 0, 0)),
+    url(../assets/imgs/civgif.webp);
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-top: dotted   5px rgb(0, 0, 0);
+    border-bottom: dotted 5px rgb(0, 0, 0);
+    margin-bottom: 80px;
+}
+
+.artigo_sombreado h5{
+    font-size: 24px;
+    color: rgb(255, 106, 0);
+    text-shadow: 0px 0px 40px rgb(255, 106, 0);
+}
+
+.artigo_sombreado .texto {
+    width: 60%;
+}
+
+.artigo_sombreado img {
+    width: 100px;
+    border-radius: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 40px rgb(255, 0, 0);
+}
+
+.artigo_sombreado .texto h4{
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: yellow;
+    text-shadow: 0px 0px 40px yellow;
+
+}

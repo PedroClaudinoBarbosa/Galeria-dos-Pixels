@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria dos Pixels</title>
+    <link rel="stylesheet" href="styles/style_biblioteca_curiosidades.css">
+</head>
+<body>
+    <div class="galeria">
+        <div class="container">
+            <div class="nav_bar">
+                    <div class="usuario">
+                    <img src="../assets/imgs/kratos.webp" alt="">
+                    <h3 id="b_usuario"></h3>
+                    </div>
+                
+                    <button onclick="salao()">Salão Principal</button>
+                    <button onclick="linha()">Linha do Tempo</button>
+                    <button onclick="opinioes()">Tribunal das Opiniões</button>     
+                    <button onclick="hardware()">Hall do Hardware & Software</button>             
+            </div>
+        </div>
+        <div class="apresentacao">
+            <h3>Galeria dos Pixels</h3>
+            <h1>Nível Secreto</h1>
+            <h3>Saiba sobre curiosidades inétidas sobre os seus consoles e jogos favoritos!</h3>
+            <img src="../assets/imgs/mariodancing.webp" alt="">
+        </div>
+<div class="artigo">
+    <div class="texto">
+        <h4>Roda Doom?</h4>
+        <p>Um dos maiores memes da cultura gamer é ver até onde o clássico <em>DOOM</em> pode ser levado. Lançado em 1993, o jogo foi tão influente e tecnicamente versátil que fãs e desenvolvedores passaram a testá-lo nos dispositivos mais inusitados possíveis. Hoje, é possível rodar <em>DOOM</em> em uma geladeira inteligente, dentro de um documento PDF, em calculadoras científicas, caixas eletrônicos, relógios, e até em um cigarro eletrônico. A brincadeira virou um símbolo da criatividade hacker e da eficiência do código original.</p> 
+    </div>
+    <div>
+        <img src="../assets/imgs/doom.webp" alt="">
+    </div>
+</div>
+
+<div class="artigo">
+    <div>
+        <img src="../assets/imgs/steve.webp" alt="">
+    </div>
+    <div class="texto">
+        <h4>Jogo Mais Vendido</h4>
+        <p><em>Minecraft</em> conquistou o título de jogo mais vendido da história, superando marcas lendárias como <em>Tetris</em> e <em>GTA V</em>. Com uma proposta simples, mas extremamente criativa, o jogo oferece liberdade total para explorar, construir e sobreviver em mundos gerados proceduralmente. Sua estética em blocos, fácil de adaptar e expandir, aliada a atualizações constantes e à enorme comunidade de mods, fez de <em>Minecraft</em> um fenômeno global com apelo entre todas as idades.</p> 
+    </div>
+</div>
+
+<div class="artigo">
+    <div class="texto">
+        <h4>A Voz do Mario</h4>
+        <p>Por mais de 25 anos, a voz marcante do Mario foi interpretada por Charles Martinet, ator e dublador americano que deu vida ao famoso encanador com bordões como “It’s-a me, Mario!” e “Let’s-a go!”. Sua performance começou oficialmente em Super Mario 64 (1996) e se tornou parte essencial da identidade do personagem.
+
+        Martinet também deu voz a outros personagens do universo Nintendo, como Luigi, Wario e Waluigi. Em 2023, ele anunciou sua aposentadoria dos jogos, mas continua envolvido com a franquia como embaixador oficial de Mario. Sua contribuição é considerada histórica, marcando gerações com alegria, carisma e uma voz inconfundível.</p> 
+    </div>
+    <div>
+        <img src="../assets/imgs/charles.webp" alt="">
+    </div>
+</div>
+
+<div class="artigo_sombreado">
+    <div class="texto">
+        <h4>Games Alinhados com a ODS</h4>
+        <h5>Educação de Qualidade</h5>
+        <img src="../assets/imgs/ods4.webp" alt="">
+
+        <p>Os jogos digitais têm grande potencial educativo, alinhando-se ao ODS 4 da ONU, que busca garantir educação de qualidade para todos. Títulos como Civilization VI ensinam história, geografia e ciência de forma envolvente. Já Kerbal Space Program introduz conceitos de física e engenharia, enquanto Assassin’s Creed: Discovery Tour permite explorar civilizações antigas com foco histórico.Jogos educativos como Duolingo, Math Blaster e Lightbot mostram como a gamificação pode tornar o aprendizado mais acessível, divertido e eficaz. Assim, os games vão além do entretenimento — são ferramentas valiosas para o ensino no mundo moderno.</p>
+    </div> 
+</div>
+
+<div class="artigo">
+    <div class="texto">
+        <h4>Jogos Brasileiros</h4>
+        <p>A indústria de games brasileira tem ganhado cada vez mais reconhecimento internacional graças à criatividade e qualidade de seus títulos. Um exemplo é Momodora, série de ação e plataforma criada pelo estúdio Bombservice, que mistura pixel art refinada com narrativa envolvente. Outro destaque é Mullet MadJack, um FPS estiloso e frenético desenvolvido pela Cyber Manatee, que combina visual vibrante com jogabilidade acelerada. Esses jogos mostram como o Brasil vem se destacando não só na produção, mas também na inovação dentro do cenário global de games..</p> 
+    </div>
+    <div>
+        <img src="../assets/imgs/gamesbr.webp" alt="">
+    </div>
+</div>
+
+<div class="artigo">
+    <div>
+        <img src="../assets/imgs/daggermap.webp" alt="">
+    </div>
+    <div class="texto">
+        <h4>Mapa Maior dos Games</h4>
+        <p>Quando se fala em mundos gigantescos nos games, nenhum supera <em>The Elder Scrolls II: Daggerfall</em>. Lançado em 1996, seu mapa tem mais de 160 mil km² — maior que muitos países! Mesmo que grande parte seja gerada de forma procedural, o escopo do jogo impressiona até hoje. Em contraste, jogos como <em>Skyrim</em>, da mesma franquia, oferecem mapas menores, porém mais densos e detalhados. <em>Daggerfall</em> é um marco da ambição e escala nos RPGs ocidentais.</p> 
+    </div>
+</div>
+    </div>
+</body>
+</html>
+<script src="scripts/navbar.js"></script>
+<script>
+        window.onload = function () {
+        // Exibe o nome do usuário
+        b_usuario.innerHTML = `<span class="amarelo">${sessionStorage.NOME_USUARIO}</span>`;
+    };
+</script>

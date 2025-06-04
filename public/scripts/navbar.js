@@ -17,3 +17,8 @@ function linha(){
 function hardware(){
     window.location = "hall_hardware.html";
 }
+
+
+function biblioteca(){
+    window.location = "biblioteca_das_curiosidades.html";
+}

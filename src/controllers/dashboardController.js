@@ -1,8 +1,6 @@
 var medidaModel = require("../models/dashboardModel");
 
 function buscarGeracao(req, res) {
-
-
     medidaModel.buscarGeracaoConsoles().then(function (resultado) {
         res.status(200).json(resultado);
     }).catch(function (erro) {
