@@ -92,7 +92,7 @@ body {
 
 .galeria .card {
     border-radius: 20px;
-    width: 300px;
+    width: 320px;
     height: 400px;
     background-image: linear-gradient(to bottom, #000000 40%, rgba(24, 0, 180, 0.304));
     border: none;

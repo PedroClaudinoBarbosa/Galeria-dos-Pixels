@@ -17,8 +17,8 @@
                 
                     <button onclick="salao()">Salão Principal</button>
                     <button onclick="linha()">Linha do Tempo</button>
-                    <button onclick="hardware()">Biblioteca do Hardware & Software</button>         
-                    <button onclick="salao()">Hall das Curiosidades</button>                    
+                    <button onclick="hardware()">Hall do Hardware & Software</button>         
+                    <button onclick="salao()">Biblioteca das Curiosidades</button>                    
             </div>
         </div>
         <div class="perguntas">
@@ -438,11 +438,10 @@ setInterval(atualizarGraficoJogos, 10000);
 
 
 function atualizarSelects() {
-    // Obter o ID do usuário do sessionStorage
     const idUsuario = sessionStorage.ID_USUARIO;
     
     if (!idUsuario) {
-        console.error("ID do usuário não encontrado no sessionStorage");
+        console.error("ID do usuário não encontrado!");
         return;
     }
 
@@ -461,12 +460,10 @@ function atualizarSelects() {
     .then(function (resposta) {
         console.log(`Jogos favoritos do usuário: ${JSON.stringify(resposta)}`);
         
-        // Desmarcar todos os checkboxes primeiro
         document.querySelectorAll('input[name="jogoFavorito"]').forEach(checkbox => {
             checkbox.checked = false;
         });
         
-        // Marcar os checkboxes dos jogos favoritos do usuário
         resposta.forEach(jogo => {
             const checkbox = document.querySelector(`input[name="jogoFavorito"][value="${jogo.fkIdJogoFavorito}"]`);
             if (checkbox) {
