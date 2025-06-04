@@ -37,14 +37,12 @@ body {
  
 .galeria{
     background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.226) 100%),
+    
     url(../assets/imgs/corte.webp);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: top;
-    background-size: cover;
-    min-height: 150vh;
-    min-width: 100vw;
+    min-width: auto;
 }
 
 .galeria .container {

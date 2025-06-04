@@ -39,16 +39,17 @@ body {
     height: 100vh;
     width: max-content; /* Importante: permite expandir horizontalmente conforme o conteúdo */
 }
- 
+
 .galeria{
     background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.226) 100%),
     url(../assets/imgs/sonicbackgroud.gif);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     background-repeat: repeat-x;
     background-position: bottom;
+    min-width: auto;
     min-height: 100vh;
 }
+
 
 .galeria .container {
     background-image: linear-gradient(to bottom, #4f1869 20%, rgba(34, 87, 94, 0));
