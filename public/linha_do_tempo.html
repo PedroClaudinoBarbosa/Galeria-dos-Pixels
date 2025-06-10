@@ -303,10 +303,7 @@
 <script>
     b_usuario.innerHTML = `<span class="amarelo">${sessionStorage.NOME_USUARIO}</span>`;
   window.addEventListener("wheel", function (e) {
-    // Impede o scroll vertical padrão
     e.preventDefault();
-
-    // Faz o scroll horizontal com base na rolagem vertical
     window.scrollBy({
       left: e.deltaY,
       behavior: "smooth"

@@ -34,10 +34,20 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+
+ .perguntas h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    width: 40%;
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+}
  
 .galeria{
     background-image:
-    
+    linear-gradient(to right, #0000009c, rgba(0, 0, 0, 0) 10%),
+    linear-gradient(to left, #0000009c, rgba(0, 0, 0, 0) 10%),
+linear-gradient(to top, #0000008a 100%, rgba(0, 0, 0, 0) 100%),
     url(../assets/imgs/corte.webp);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     background-repeat: no-repeat;
@@ -77,7 +87,7 @@ body {
 .galeria .container img {
     width: 52px;
     height: 52px;
-    border: solid 2px white;
+    border: solid 2px rgb(255, 46, 46);
     object-fit: cover;
     margin: 0px 10px 10px 0px;
     border-style: dashed;
@@ -115,7 +125,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
     flex-direction: column;
     margin-bottom: 20px;
     
@@ -123,7 +133,7 @@ body {
 
 .galeria .perguntas img{
     width: 300px;
-    border-bottom: #ffffff solid 2px;
+    margin-bottom: -10px;
 }
 
 .galeria .perguntas .card {
@@ -134,8 +144,9 @@ body {
     padding: 20px;
     border: solid 1px white;
     color: white;
-    min-width: 500px;
+    min-width: 400px;
     min-height: 50px;
+    border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.719);
 }
 
@@ -187,12 +198,13 @@ body {
 }
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(227, 153, 80);
     font-size: 50px;
+    border-bottom: dashed 2px;
 }
 
 .jogosFavoritos {
-    width: 80vw;
+    width: 95vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -204,7 +216,9 @@ h1 {
     background-color: rgba(0, 0, 0, 0.726);
     color: white;
     width: 200px;
+    border-radius: 20px;
     padding: 10px;
+    margin: 5px;
 }
 
 h2 {
@@ -214,5 +228,14 @@ h2 {
 
 h3 {
     text-align: center;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
     color: white;
 }

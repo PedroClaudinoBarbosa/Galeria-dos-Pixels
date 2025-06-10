@@ -65,7 +65,7 @@ body {
     width: 52px;
     height: 52px;
     border-radius: 50px;
-    border: solid 2px white;
+    border: solid 2px rgb(255, 46, 46);
     object-fit: cover;
     margin: 10px;
     border-style: dashed;

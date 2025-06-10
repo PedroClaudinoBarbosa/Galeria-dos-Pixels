@@ -42,13 +42,13 @@ body {
 }
 
 .galeria{
-    background-image:
-    
+    background-image:    linear-gradient(to right, #07d52941, rgba(0, 0, 0, 0) 5%),
+    linear-gradient(to left, #07d52941, rgba(0, 0, 0, 0) 5%),
     url(../assets/imgs/matrix.webp);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    background-repeat: repeat;
+    background-repeat: no-repeat, no-repeat, repeat;
     background-position: top;
-    background-size: 40%;
+    background-size: cover, cover,40%;
     min-height: 100%;
     min-width: auto;
 }
@@ -86,7 +86,7 @@ body {
 .galeria .container img {
     width: 52px;
     height: 52px;
-    border: solid 2px white;
+    border: solid 2px rgb(255, 46, 46);
     object-fit: cover;
     margin: 0px 10px 10px 0px;
     border-style: dashed;
@@ -163,6 +163,7 @@ h3 {
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
+    background-position: bottom;
     transition: 0.3s ease-in-out;
 }
 
